@@ -3,7 +3,31 @@ class DogsController < ApplicationController
     @dogs = Dog.all
   end
 
+
+  def new
+    @dog = Dog.new
+  end
+
+  def show
+  end
+
+  def create
+    @dog = Dog.new(dog_params)
+    @dog.user = current_user
+    if @dog.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def dog_params
+    params.require(:dog).permit(:gender, :age, :race, :height, :name, :description)
+
   def show
     @doge = Dog.find(params[:id])
+
   end
 end
