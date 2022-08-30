@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Dog.destroy_all
+
 Chatroom.destroy_all
 
 dogs = Dog.create!([
@@ -17,16 +18,18 @@ dogs = Dog.create!([
     age: "13",
     race: "Chihuahua",
     height: "20cm",
+    address: "16 Villa Gaudelet, Paris",
     description: "Mon chien haha trop bien lol"
   },
 
   {
-    user_id: 1,
+    user_id: 2,
     name: "Lulu",
     gender: "male",
     age: "13",
     race: "Berger Allemand",
     height: "25cm",
+    address: "Tour Eiffel, Paris",
     description: "Mon chien ehe"
   },
 ])
