@@ -5,6 +5,7 @@ class DogsController < ApplicationController
     @dogs = Dog.all
   end
 
+
   def new
     @dogs = Dog.all
     @dog = Dog.new
