@@ -3,6 +3,7 @@ class DogsController < ApplicationController
     @dogs = Dog.all
   end
 
+
   def new
     @dog = Dog.new
   end
@@ -24,5 +25,9 @@ class DogsController < ApplicationController
 
   def dog_params
     params.require(:dog).permit(:gender, :age, :race, :height, :name, :description)
+
+  def show
+    @doge = Dog.find(params[:id])
+
   end
 end
