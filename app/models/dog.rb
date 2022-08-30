@@ -3,4 +3,5 @@ class Dog < ApplicationRecord
   validates :gender, presence: true, inclusion: { in: ['male', 'female'] }
   validates :race, presence: true
   validates :name, presence: true
+  has_many_attached :photo
 end
