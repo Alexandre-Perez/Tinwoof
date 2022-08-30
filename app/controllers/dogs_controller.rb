@@ -5,18 +5,20 @@ class DogsController < ApplicationController
     @dogs = Dog.all
   end
 
-
   def new
     @dogs = Dog.all
     @dog = Dog.new
   end
 
   def show
+    @dog = Dog.find(params[:id])
   end
 
   def create
     @dog = Dog.new(dog_params)
+
     @dog.user = current_user
+
     if @dog.save
       redirect_to root_path
     else
