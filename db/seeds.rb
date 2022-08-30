@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Dog.destroy_all
+Chatroom.destroy_all
+
 dogs = Dog.create!([
   {
-    user_id: 3,
+    user_id: 1,
     name: "Loki",
     gender: "female",
     age: "13",
@@ -18,7 +21,7 @@ dogs = Dog.create!([
   },
 
   {
-    user_id: 3,
+    user_id: 1,
     name: "Lulu",
     gender: "male",
     age: "13",
@@ -27,3 +30,6 @@ dogs = Dog.create!([
     description: "Mon chien ehe"
   },
 ])
+
+chatroom = Chatroom.create!(
+  name: 'message')
