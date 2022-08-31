@@ -17,7 +17,7 @@ class DogsController < ApplicationController
     @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
-    @precise = request.ip
+    @precise = request.location.city
   end
 
   def create
