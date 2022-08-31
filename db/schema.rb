@@ -10,19 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_132501) do
-=======
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
->>>>>>> 1c96b24d81c58a67485d6385347fac2e36af3e2c
-=======
-
 ActiveRecord::Schema[7.0].define(version: 2022_08_31_093554) do
-
-
->>>>>>> d47d3a29a2ed067cd8848e04b7f92cbef9d0298e
-  # These are extensions that must be enabled in order to support this database
+ # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
