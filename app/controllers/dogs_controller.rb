@@ -16,6 +16,7 @@ class DogsController < ApplicationController
   def show
     @user = current_user
     @precise = request.location.city
+    @user.location = @precise
     # enregistrer la variable dans une instance de user @user.location = @precise
     @dog = Dog.find(params[:id])
     @comment = Comment.new
