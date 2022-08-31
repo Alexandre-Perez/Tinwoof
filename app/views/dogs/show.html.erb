@@ -16,6 +16,6 @@
 <% end %>
 </li></ul>
 
-<% if @dog.id == current_user_id %>
+<% if @dog.id == current_user.id %>
 <p><%= @user.location %></p>
 <% end %>
