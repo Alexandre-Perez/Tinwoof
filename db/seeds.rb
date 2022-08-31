@@ -10,4 +10,4 @@ Dog.destroy_all
 
 Chatroom.destroy_all
 
-chatroom = Chatroom.create!(name: 'message')
+@chatroom = Chatroom.create!(name: 'message')
