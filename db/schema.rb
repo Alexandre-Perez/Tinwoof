@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
+
+ActiveRecord::Schema[7.0].define(version: 2022_08_31_093554) do
+
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,6 +51,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
     t.string "name"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.bigint "dog_id", null: false
+    t.bigint "user_id", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dog_id"], name: "index_comments_on_dog_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.string "gender"
@@ -74,12 +87,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_chatrooms", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "chatroom_id", null: false
@@ -87,15 +94,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_user_chatrooms_on_chatroom_id"
     t.index ["user_id"], name: "index_user_chatrooms_on_user_id"
-  end
-
-  create_table "user_reviews", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "review_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["review_id"], name: "index_user_reviews_on_review_id"
-    t.index ["user_id"], name: "index_user_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -115,11 +113,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_150623) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "dogs"
+  add_foreign_key "comments", "users"
   add_foreign_key "dogs", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "user_chatrooms", "chatrooms"
   add_foreign_key "user_chatrooms", "users"
-  add_foreign_key "user_reviews", "reviews"
-  add_foreign_key "user_reviews", "users"
 end

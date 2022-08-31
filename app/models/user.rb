@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :dogs
-  has_many :user_reviews
-  has_many :reviews, through: :user_reviews
+  has_many :comments
   has_many :user_chatrooms
   has_many :chatrooms, through: :user_chatrooms
   has_many :messages

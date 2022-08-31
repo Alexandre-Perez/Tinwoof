@@ -3,7 +3,7 @@
 <%= simple_form_for(@dog) do |f| %>
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :gender %>
+    <%= f.input :gender, as: :select, collection: ["male", "female"] %>
     <%= f.input :age %>
     <%= f.input :race %>
     <%= f.input :height %>
