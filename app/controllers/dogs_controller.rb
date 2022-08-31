@@ -14,7 +14,8 @@ class DogsController < ApplicationController
 
   def show
     @user = current_user
-    @precise = request.location.city
+    # @precise = request.location.city
+    @precise = "La Rochette"
     @user.location = @precise
     @user.save!
     @dog = Dog.find(params[:id])
