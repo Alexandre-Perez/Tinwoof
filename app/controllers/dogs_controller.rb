@@ -11,13 +11,13 @@ class DogsController < ApplicationController
   def new
     @dogs = Dog.all
     @dog = Dog.new
-    @precise = request.location.city
   end
 
   def show
     @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
+    @precise = request.ip
   end
 
   def create
