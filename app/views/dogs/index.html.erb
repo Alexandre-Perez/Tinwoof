@@ -6,12 +6,21 @@
 
           <div>
             <h2><%= dog.name  %></h2>
-            <p><%= dog.description %></p>
+
+             <% @users.each do |user| %>
+                <%= user.email %>
+                <%= user.last_seen_at.nil? ? "Never Signed In" : time_ago_in_words(user.last_seen_at)%>
+            <% end %>
+
+            <% @online_users.each do |user| %>
+              <%= user.email %>
+              <span class="btn btn-sucess">Online</span>
+            <% end %>
           </div>
 
           <h2 class="card-trip-pricing">"UserName"</h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
     </div>
+    <% end %>
   <% end %>
-<% end %>

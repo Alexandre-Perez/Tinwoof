@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :reviews
   resources :dogs
   resources :chatrooms, only: [:show] do
-  resources :messages, only: [:new, :create, :destroy]
+    resources :messages, only: [:new, :create, :destroy]
   end
 end
