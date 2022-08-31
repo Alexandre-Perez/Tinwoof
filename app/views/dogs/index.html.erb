@@ -1,20 +1,13 @@
 <% @dogs.each do |dog| %>
   <%= link_to dog_path(dog), class: "link-dog" do %>
     <div class="card-trip">
-      <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg" />
+       <%= cl_image_tag dog.photos.first.key, crop: :fill %>
         <div class="card-trip-infos">
-
           <div>
             <h2><%= dog.name  %></h2>
 
-             <% @users.each do |user| %>
-                <%= user.email %>
-                <%= user.last_seen_at.nil? ? "Never Signed In" : time_ago_in_words(user.last_seen_at)%>
-            <% end %>
-
             <% @online_users.each do |user| %>
-              <%= user.email %>
-              <span class="btn btn-sucess">Online</span>
+              <p>Online</p>
             <% end %>
           </div>
 
