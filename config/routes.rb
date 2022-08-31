@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
   resources :chatrooms, only: [:show] do
-  resources :messages, only: [:new, :create, :destroy]
+    resources :messages, only: [:new, :create, :destroy]
   end
 end
