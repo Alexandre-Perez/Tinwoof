@@ -18,7 +18,6 @@ class DogsController < ApplicationController
     @comment = Comment.new
     @comments = Comment.all
     @precise = request.location.city
-    @precise = current_user
   end
 
   def create
