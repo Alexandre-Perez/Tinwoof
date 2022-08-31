@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :reviews
-  resources :dogs
+
+  resources :dogs do
+    resources :comments, only: [:new, :create]
+  end
   resources :chatrooms, only: [:show] do
     resources :messages, only: [:new, :create, :destroy]
   end
