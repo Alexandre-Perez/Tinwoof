@@ -3,7 +3,6 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.all
-
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
   end
@@ -17,6 +16,7 @@ class DogsController < ApplicationController
     @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
+    @localisation = request.ip
   end
 
   def create
