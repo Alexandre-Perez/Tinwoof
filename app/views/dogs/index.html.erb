@@ -1,17 +1,19 @@
 <% @dogs.each do |dog| %>
   <%= link_to dog_path(dog), class: "link-dog" do %>
     <div class="card-trip">
-      <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg" />
+       <%= cl_image_tag dog.photos.first.key, crop: :fill %>
         <div class="card-trip-infos">
-
           <div>
             <h2><%= dog.name  %></h2>
-            <p><%= dog.description %></p>
+
+            <% @online_users.each do |user| %>
+              <p>Online</p>
+            <% end %>
           </div>
 
           <h2 class="card-trip-pricing">"UserName"</h2>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
     </div>
+    <% end %>
   <% end %>
-<% end %>
