@@ -5,7 +5,6 @@ class DogsController < ApplicationController
     @dogs = Dog.all
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
-
   end
 
   def new
@@ -17,7 +16,7 @@ class DogsController < ApplicationController
     @user = current_user
     @precise = request.location.city
     @user.location = @precise
-    # enregistrer la variable dans une instance de user @user.location = @precise
+    @user.save!
     @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
