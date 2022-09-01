@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     # @results = @results.first.address
     # @user.address = @results
     # @user.save!
+    @users = User.all
     @dogs = Dog.all
     @markers = @dogs.geocoded.map do |dog|
       {
