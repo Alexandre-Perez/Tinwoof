@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+     #@users = User.all
+    # @user = current_user
+    # @super = request.ip
+    # @user.ip = @super
+    # @results = Geocoder.search(@super)
+    # @results = @results.first.address
+    # @user.address = @results
+    # @user.save!
     @dogs = Dog.all
-    @user = current_user
-    @super = request.ip
-    @user.ip = @super
-    @results = Geocoder.search(@super)
-    @results = @results.first.address
-    @user.address = @results
-    @user.save!
-
     @markers = @dogs.geocoded.map do |dog|
       {
         lat: dog.latitude,

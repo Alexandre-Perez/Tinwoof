@@ -1,6 +1,9 @@
 <h1>show#dogs</h1>
-
+<% if @dog.photos.length != 0 %>
 <%= cl_image_tag @dog.photos.first.key, crop: :fill %>
+<% else %>
+        <p>no picture</p>
+      <% end %>
 <p><%= @dog.name %></p>
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">

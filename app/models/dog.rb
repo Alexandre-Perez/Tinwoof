@@ -1,5 +1,4 @@
 class Dog < ApplicationRecord
-
   belongs_to :user
   has_many :comments
   validates :gender, presence: true, inclusion: { in: ['Male', 'Female'] }
