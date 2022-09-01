@@ -15,8 +15,7 @@ class DogsController < ApplicationController
     else
       @dogs = Dog.all
     end
-
-    @user = current_users
+    @user = current_user
     # @user_location = request.location.city
     @user_location = "La Rochette"
     @dogs = Dog.near(@user_location, 50)
