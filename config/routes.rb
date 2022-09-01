@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :dogs do
     resources :comments, only: [:new, :create]
   end
-  resources :chatrooms, only: [:show] do
+  resources :chatrooms, only: [:show, :index] do
     resources :messages, only: [:new, :create, :destroy]
   end
   resources :users, only: [:index]
