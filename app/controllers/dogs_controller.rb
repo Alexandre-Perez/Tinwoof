@@ -1,11 +1,18 @@
 class DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :set_dog, only: [:list, :show, :edit, :update, :destroy]
 
   def index
     @dogs = Dog.all
 
     @users = User.all
+
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
+
+    if params[:query].present?
+      @dogs = Dog.where(gender: params[:query])
+    else
+      @dogs = Dog.all
+    end
   end
 
   def new
