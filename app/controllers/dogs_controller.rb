@@ -22,9 +22,9 @@ class DogsController < ApplicationController
 
   def show
     @user = current_user
-    @precise = request.location.city
-    #@precise = "La Rochette"
-    @user.location = @precise
+    #@precise = request.location.city
+    @precise = "La Rochette"
+    #@user.location = @precise
     @localisation = request.ip
     @user.ip = @localisation
     @user.save!
