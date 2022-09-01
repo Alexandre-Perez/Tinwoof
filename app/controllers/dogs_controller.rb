@@ -4,9 +4,9 @@ class DogsController < ApplicationController
   def index
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
-    @user = current_users
-    # @user_location = request.location.city
-    @user_location = "La Rochette"
+    @user = current_user
+    @user_location = request.location.city
+    #@user_location = "La Rochette"
     @dogs = Dog.near(@user_location, 50)
   end
 

@@ -1,7 +1,11 @@
 <% @dogs.each do |dog| %>
   <%= link_to dog_path(dog), class: "link-dog" do %>
     <div class="card-trip">
-       <%= cl_image_tag dog.photos.first.key, crop: :fill %>
+      <% if dog.photos.length != 0 %>
+        <%= cl_image_tag dog.photos.first.key, crop: :fill %>
+      <% else %>
+        <p>no picture</p>
+      <% end %>
         <div class="card-trip-infos">
           <div>
             <h2><%= dog.name  %></h2>
