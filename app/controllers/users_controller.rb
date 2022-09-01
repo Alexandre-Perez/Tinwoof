@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     @markers = @dogs.geocoded.map do |dog|
       {
         lat: dog.latitude,
-        lng: dog.longitude
+        lng: dog.longitude,
+        image_url: helpers.asset_url("dog.png")
       }
     end
   end

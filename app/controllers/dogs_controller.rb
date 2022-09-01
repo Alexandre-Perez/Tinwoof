@@ -9,11 +9,11 @@ class DogsController < ApplicationController
     end
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
-    @user = current_user
-    @user_location = request.location.city
-    #@user_location = "La Rochette"
-    @dogs = Dog.near(@user_location, 50)
-    @markers = @dogs.map {|dog| {lat: dog.latitude, lng:dog.longitude}}
+    #@user = current_user
+    #@user_location = request.location.city
+    @user_location = "La Rochette"
+    @dogs = Dog.near(@user_location, 1)
+    @markers = @dogs.map { |dog| {lat: dog.latitude, lng: dog.longitude} }
   end
 
   def new
@@ -23,13 +23,15 @@ class DogsController < ApplicationController
 
   def show
     @user = current_user
-    @precise = request.location.city
-    @user.location = @precise
-    #@precise = "La Rochette"
+    #@precise = request.location.city
+    @precise = "La Rochette"
     @dog = Dog.find(params[:id])
-    @user_precise_location = {lat: Geocoder.search(@precise).first.latitude,
-                              lng:Geocoder.search(@precise).first.longitude}
-    @dog_precise_location = {lat: @dog.latitude, lng: @dog.longitude}
+    #@user.location = @precise
+    @user_precise_location = {lat: Geocoder.search("La Rochette").first.latitude,
+                              lng:Geocoder.search("La Rochette").first.longitude,
+                              image_url: helpers.asset_url("human_marker.png")
+                              }
+    @dog_precise_location = { lat: @dog.latitude, lng: @dog.longitude, image_url: helpers.asset_url("dog.png") }
     @localisation = request.ip
     @markers = [@user_precise_location, @dog_precise_location]
     @user.ip = @localisation
