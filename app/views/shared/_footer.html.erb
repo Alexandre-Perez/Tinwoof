@@ -1,0 +1,20 @@
+<div class="footer-fix w-100">
+  <div class="footer-links justify-content-around p-2">
+    <% if user_signed_in? %>
+        <%= link_to dogs_path, class: "nav-link" do %>
+          <img src="https://zupimages.net/up/22/35/nghq.png" style="width: 60px;">
+        <% end %>
+        <%= link_to user_path(current_user), class: "nav-link" do %>
+          <%= image_tag "avatar_profil.png", width: 60 %>
+          <%# <%= current_user.first_name %>
+        <% end %>
+        <%= link_to chatrooms_path, class: "nav-link" do %>
+          <img src= "https://zupimages.net/up/22/35/q6ro.png" style="width: 60px;">
+        <% end %>
+    <% else %>
+      <a class="nav-link">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </a>
+    <% end %>
+  </div>
+</div>
