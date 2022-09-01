@@ -1,0 +1,40 @@
+.footer-fix {
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #DFF6FF;
+  box-shadow: 0px -1px 10px #47b5ff;
+}
+.footer-links a {
+  color: black;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #d23333;
+}
+
+.relative-box-image {
+  position: relative;
+}
+
+.absolute-image {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, 0%);
+}

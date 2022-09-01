@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,5 +13,5 @@ Rails.application.routes.draw do
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: [:new, :create, :destroy]
   end
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show]
 end

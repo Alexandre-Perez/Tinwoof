@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "geocoder"
-gem 'filterrific'
+gem "rails_admin", "~> 3.0"
 
 gem 'faker'
 
@@ -81,3 +81,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
