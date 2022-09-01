@@ -9,8 +9,6 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-gem "cloudinary"
-
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -30,13 +28,14 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "geocoder"
+gem 'filterrific'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 gem "dotenv-rails", groups: [:development, :test]
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-
+gem "cloudinary"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
