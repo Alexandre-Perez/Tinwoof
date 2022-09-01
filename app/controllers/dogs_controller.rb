@@ -22,14 +22,14 @@ class DogsController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @localisation = request.ip
-    @user.ip = @localisation
-    @user.save!
-    #@precise = request.location.city
-    #@precise = "La Rochette"
     @dog = Dog.find(params[:id])
-    #@user.location = @precise
+    @user = current_user
+    @precise = request.location.city
+    @user.location = @precise
+    @user.save!
+    #@localisation = request.ip
+    #@user.ip = @localisation
+    #@precise = "La Rochette"
     @user_precise_location = {lat: Geocoder.search(@precise).first.latitude,
                               lng: Geocoder.search(@precise).first.longitude,
                               image_url: helpers.asset_url("human_marker.png")
