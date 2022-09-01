@@ -26,9 +26,9 @@ class DogsController < ApplicationController
     @user = current_user
     #@precise = request.location.city
     #@user.location = @precise
-    @localisation = request.ip
-    @user.ip = @localisation
-    #@precise = "La Rochette"
+    #@localisation = request.ip
+    #@user.ip = @localisation
+    @precise = "La Rochette"
     @user.save!
     @user_precise_location = {lat: Geocoder.search(@localisation).first.latitude,
                               lng: Geocoder.search(@localisation).first.longitude,

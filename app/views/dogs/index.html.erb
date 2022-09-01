@@ -1,6 +1,5 @@
 <%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
-  <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
-
+ <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
@@ -22,7 +21,6 @@
                 <td><%= user.last_seen_at.nil? ? "Never sign" : time_ago_in_words(user.last_seen_at)  %></td>
                 </tr>
             <% end %>
-
             <% @online_users.each do |user| %>
               <%= user.first_name %>
               <p>Online</p>
