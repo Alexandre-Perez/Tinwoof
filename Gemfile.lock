@@ -310,7 +310,6 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-  railsadmin
   faker
   font-awesome-sass (~> 6.1)
   geocoder

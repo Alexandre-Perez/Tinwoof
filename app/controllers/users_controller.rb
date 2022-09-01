@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-     #@users = User.all
+    @users = User.all
     # @user = current_user
     # @super = request.ip
     # @user.ip = @super
