@@ -13,6 +13,7 @@ class DogsController < ApplicationController
     @user_location = request.location.city
     #@user_location = "La Rochette"
     @dogs = Dog.near(@user_location, 1)
+    @markers = @dogs.map {|dog| {lat: dog.latitude, lng:dog.longitude}}
   end
 
   def new
@@ -23,12 +24,16 @@ class DogsController < ApplicationController
   def show
     @user = current_user
     #@precise = request.location.city
-    @precise = "La Rochette"
     #@user.location = @precise
+    @precise = "La Rochette"
+    @dog = Dog.find(params[:id])
+    @user_precise_location = {lat: Geocoder.search("La Rochette").first.latitude,
+                              lng:Geocoder.search("La Rochette").first.longitude}
+    @dog_precise_location = {lat: @dog.latitude, lng: @dog.longitude}
     @localisation = request.ip
+    @markers = [ @user_precise_location, @dog_precise_location]
     @user.ip = @localisation
     @user.save!
-    @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
   end
