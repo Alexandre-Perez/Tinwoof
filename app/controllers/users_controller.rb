@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @dogs = Dog.all
     @user = current_user
     @super = request.ip
     @user.ip = @super
@@ -9,10 +10,10 @@ class UsersController < ApplicationController
     @user.address = @results
     @user.save!
 
-    @markers = @users.geocoded.map do |user|
+    @markers = @dogs.geocoded.map do |dog|
       {
-        lat: user.latitude,
-        lng: user.longitude
+        lat: dog.latitude,
+        lng: dog.longitude
       }
     end
   end
