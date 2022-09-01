@@ -2,17 +2,22 @@ class DogsController < ApplicationController
   before_action :set_dog, only: [:list, :show, :edit, :update, :destroy]
 
   def index
-    @dogs = Dog.all
-
     @users = User.all
 
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
+
 
     if params[:query].present?
       @dogs = Dog.where(gender: params[:query])
     else
       @dogs = Dog.all
     end
+
+    @user = current_users
+    # @user_location = request.location.city
+    @user_location = "La Rochette"
+    @dogs = Dog.near(@user_location, 50)
+
   end
 
   def new
@@ -21,9 +26,15 @@ class DogsController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @precise = request.location.city
+    # @precise = "La Rochette"
+    @user.location = @precise
+    @user.save!
     @dog = Dog.find(params[:id])
     @comment = Comment.new
     @comments = Comment.all
+    # @localisation = request.ip
   end
 
   def create
