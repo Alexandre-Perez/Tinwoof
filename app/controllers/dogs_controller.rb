@@ -12,7 +12,7 @@ class DogsController < ApplicationController
     @user = current_user
     @user_location = request.location.city
     #@user_location = "La Rochette"
-    #@dogs = Dog.near(@user_location, 50)
+    @dogs = Dog.near(@user_location, 50)
   end
 
   def new
@@ -22,8 +22,8 @@ class DogsController < ApplicationController
 
   def show
     @user = current_user
-    #@precise = request.location.city
-    @precise = "La Rochette"
+    @precise = request.location.city
+    #@precise = "La Rochette"
     @user.location = @precise
     @localisation = request.ip
     @user.ip = @localisation
