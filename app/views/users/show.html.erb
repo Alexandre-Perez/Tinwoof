@@ -1,4 +1,4 @@
-<% if @user.photo %>
+<% if @user.photo.attached? %>
   <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
 <% end %>
 <%= link_to "You Have a new pet click here !", new_dog_path, class: "btn btn-primary w-100 my-5" %>
