@@ -1,4 +1,4 @@
-<h1>new</h1>
+<h1>new dog</h1>
 
 <%= simple_form_for(@dog) do |f| %>
   <div class="form-inputs">
@@ -13,21 +13,4 @@
     <%= f.button :submit %>
   </div>
 
-<% end %>
-
-<h1>My reviews</h1>
-
-<% @comments.each do |comment| %>
-<%# <% if comment.dog_id == @dog.id && @dog.user_id == current_user.id%>
-<ul><li><% comment.content %></li></ul>
-<%# <% end %>
-<% end %>
-
-
-<h1>My Dogsssssss :</h1>
-
-<% @dogs.each do |dog| %>
-  <% if dog.user_id == current_user.id %>
-    <ul><li><%= link_to dog.name, edit_dog_path(dog) %></li></ul>
-  <% end %>
 <% end %>
