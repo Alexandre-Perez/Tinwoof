@@ -10,8 +10,6 @@ Dog.destroy_all
 User.destroy_all
 Chatroom.destroy_all
 
-@chatroom = Chatroom.create!(name: 'message')
-
 users = User.create!([
   {
     email: "karim@gmail.com",
@@ -126,3 +124,25 @@ dogs[3].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
 file = URI.open("https://img2.storyblok.com/f/83829/1200x628/246b8b64fc/esperance-vie-chihuahua.jpg")
 dogs[4].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+
+chatrooms = Chatroom.create!([
+  {
+    name: "Chatroom with #{users[4].first_name}"
+  },
+
+  {
+    name: "Chatroom with #{users[2].first_name}"
+  },
+
+  {
+    name: "Chatroom with #{users[3].first_name}"
+  },
+
+  {
+    name: "Chatroom with #{users[1].first_name}"
+  },
+
+  {
+    name: "Chatroom with #{users[0].first_name}"
+  },
+])

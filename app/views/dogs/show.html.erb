@@ -1,41 +1,57 @@
-<% if @dog.photos.length != 0 %>
-<%= cl_image_tag @dog.photos.first.key, :class => "photoprofile", crop: :fill %>
-<% else %>
-        <p>no picture available for now ...</p>
-<% end %>
-
-<div class="container">
-<div class="row">
-<%= @dog.name %>
-<%= @dog.age %>
-<%= @dog.gender %>
-<%= @dog.race %>
-<%= @dog.height %>
-<%= @dog.description %>
-<%= @dog.address %>
-</div>
+<div class="photocontainer"><% if @dog.photos.length != 0 %>
+  <%= cl_image_tag @dog.photos.first.key, :class => "photoprofile", crop: :fill %>
+  <% else %>
+          <p>no picture available for now ...</p>
+  <% end %>
 </div>
 
+<div class="">
+  <p class="supertitle"><%= @dog.name %>, <%= @dog.age %></p>
+  <p>
+    <% if @dog.gender == "female" %>
+      <strong><%= @dog.user.first_name %></strong>'s daughter
+    <% else %>
+      <strong><%= @dog.user.first_name %></strong>'s son
+    <% end %>
+  </p>
+  <p>
+    <% if @dog.gender == "female" %>
+      <i class="fa-solid fa-venus"></i>
+    <% else %>
+      <i class="fa-solid fa-mars"></i>
+    <% end %>
+    | <%= @dog.race %>
+    | <%= @dog.height %>
+  </p>
+  <p><%= @dog.description %></p>
+  <p><%= @dog.address %></p>
+</div>
 
-<h1>Leave a review :</h1>
-<p><%= @dog.name %></p>
+<hr class="my-4">
+
+<h2 class="my-3">Leave a review to <em><%= @dog.name %></em></h2>
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
-    <%= f.input :content %>
-    <%= f.button :submit %>
+    <%= f.input :content, label: false, placeholder: "Say something" %>
+    <%= f.button :submit, class: "btn btn-primary w-100" %>
   </div>
 <% end %>
-<ul>
-<li>
+
+<hr class="my-4">
+<div class="my-4">
 <% @comments.each do |comment| %>
+<i class="fa-solid fa-comment"></i>
 <%= comment.content %>
 <% end %>
-</li>
-</ul>
+</div>
 
 
 
-<div style="width: 40%; height: 400px; margin: 0 auto;"
+  <%= link_to chatroom_path, class: "nav-link" do %>
+     <img src= "https://zupimages.net/up/22/35/q6ro.png" style="width: 60px;">
+  <% end %>
+
+<div style="width: 100%; height: 300px; margin: 0 auto;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

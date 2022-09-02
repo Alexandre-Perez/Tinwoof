@@ -1,4 +1,4 @@
-<div class="footer-fix w-100">
+<div class="footer-fix w-100" style="z-index: 1000">
   <div class="footer-links justify-content-around p-2">
     <% if user_signed_in? %>
         <%= link_to dogs_path, class: "nav-link" do %>
@@ -20,7 +20,7 @@
         <% end %>
     <% else %>
       <a class="nav-link">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%= link_to "Login", root_path, class: "nav-link" %>
       </a>
     <% end %>
   </div>

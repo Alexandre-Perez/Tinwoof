@@ -1,12 +1,11 @@
 <%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
  <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
- <%= select_tag :query, options_for_select(["Select distance"])%>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
 <% @dogs.each do |dog| %>
   <%= link_to dog_path(dog), class: "link-dog" do %>
-    <div class="card-trip">
+    <div class="card-trip my-3">
       <% if dog.photos.length != 0 %>
         <%= cl_image_tag dog.photos.first.key, crop: :fill %>
       <% else %>
