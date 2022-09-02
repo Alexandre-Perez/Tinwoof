@@ -1,4 +1,6 @@
-<%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
+<% if @user.photo %>
+  <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
+<% end %>
 <%= link_to "You Have a new pet click here !", new_dog_path, class: "btn btn-primary w-100 my-5" %>
 <p><i class="fa-solid fa-file-signature"></i> : <%= @user.first_name %></p>
 <p><i class="fa-solid fa-file-signature"></i> : <%= @user.last_name %></p>
