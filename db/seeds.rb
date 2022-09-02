@@ -10,6 +10,9 @@ Dog.destroy_all
 User.destroy_all
 Chatroom.destroy_all
 
+profile_picture = URI.open("app/assets/images/avatar_profil.png")
+
+
 users = User.create!([
   {
     email: "karim@gmail.com",
