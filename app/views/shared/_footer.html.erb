@@ -2,15 +2,17 @@
   <div class="footer-links justify-content-around p-2">
     <% if user_signed_in? %>
         <%= link_to dogs_path, class: "nav-link" do %>
-        <%= image_tag "logo_tinywoof.png", width: 60 %>
+        <img width="60" src="/assets/index_dog.png" style="
+            border: solid 1px deepskyblue;
+            border-radius: 50%; ">
         <% end %>
-        <%# <%= link_to maps_path, class: "nav-link" do %>
-          <%= image_tag "map_maker.png", width: 40 %>
+        <%= link_to users_path, class: "nav-link" do %>
+          <%= image_tag "location.png", width: 50 %>
           <%# <%= current_user.first_name %>
-        <%# <% end %>
+        <% end %>
         <%= link_to user_path(current_user), class: "nav-link relative-box-image" do %>
           <%= image_tag "avatar_profil.png", width: 40 %>
-          <%= image_tag "https://source.unsplash.com/random/?avatar", class:"absolute-image"%>
+          <%# <%= cl_image_tag user.photos.key, crop: :fill, class:"absolute-image"%>
           <%# <%= current_user.first_name %>
         <% end %>
         <%= link_to chatrooms_path, class: "nav-link" do %>

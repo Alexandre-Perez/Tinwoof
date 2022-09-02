@@ -20,13 +20,14 @@ class DogsController < ApplicationController
 
   end
 
+
+
   def new
-    @dogs = Dog.all
     @dog = Dog.new
-    @comments = Comment.all
   end
 
   def show
+    @dogs = Dog.all
     @dog = Dog.find(params[:id])
     @user = current_user
     #@precise = request.location.city

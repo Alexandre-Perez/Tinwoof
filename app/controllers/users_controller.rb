@@ -17,5 +17,12 @@ class UsersController < ApplicationController
         image_url: helpers.asset_url("dog.png")
       }
     end
+
   end
+
+  def show
+    @dogs = current_user.dogs
+    @user = current_user
+  end
+
 end
