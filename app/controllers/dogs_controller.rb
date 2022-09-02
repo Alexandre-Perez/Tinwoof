@@ -7,13 +7,17 @@ class DogsController < ApplicationController
     else
       @dogs = Dog.all
     end
+
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
+
     #@user = current_user
     #@user_location = request.location.city
+
     @user_location = "La Rochette"
-    @dogs = Dog.near(@user_location, 100)
+    # @dogs = Dog.near(@user_location, 100)
     @markers = @dogs.map { |dog| {lat: dog.latitude, lng: dog.longitude} }
+
   end
 
 
@@ -36,8 +40,10 @@ class DogsController < ApplicationController
                               lng: Geocoder.search(@precise).first.longitude,
                               image_url: helpers.asset_url("human_marker.png")
                               }
+
     @dog_precise_location = { lat: @dog.latitude, lng: @dog.longitude, image_url: helpers.asset_url("dog.png") }
     @markers = [@user_precise_location, @dog_precise_location]
+
     @comment = Comment.new
     @comments = Comment.all
   end
