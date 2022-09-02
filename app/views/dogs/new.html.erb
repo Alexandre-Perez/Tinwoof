@@ -8,14 +8,23 @@
     <%= f.input :race %>
     <%= f.input :height %>
     <%= f.input :description %>
+    <%= f.input :address %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.button :submit %>
   </div>
 
 <% end %>
 
+<h1>My reviews</h1>
 
-<h1>My Dogs :</h1>
+<% @comments.each do |comment| %>
+<%# <% if comment.dog_id == @dog.id && @dog.user_id == current_user.id%>
+<ul><li><% comment.content %></li></ul>
+<%# <% end %>
+<% end %>
+
+
+<h1>My Dogsssssss :</h1>
 
 <% @dogs.each do |dog| %>
   <% if dog.user_id == current_user.id %>

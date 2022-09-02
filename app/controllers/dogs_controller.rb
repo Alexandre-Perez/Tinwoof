@@ -9,26 +9,34 @@ class DogsController < ApplicationController
     end
     @users = User.all
     @online_users = User.where("last_seen_at > ?", 5.minutes.ago)
-    @user = current_user
-    @user_location = request.location.city
-    #@user_location = "La Rochette"
-    #@dogs = Dog.near(@user_location, 50)
+    #@user = current_user
+    #@user_location = request.location.city
+    @user_location = "La Rochette"
+    @dogs = Dog.near(@user_location, 100)
+    @markers = @dogs.map { |dog| {lat: dog.latitude, lng: dog.longitude} }
   end
 
   def new
     @dogs = Dog.all
     @dog = Dog.new
+    @comments = Comment.all
   end
 
   def show
+    @dog = Dog.find(params[:id])
     @user = current_user
     #@precise = request.location.city
+    #@user.location = @precise
+    #@localisation = request.ip
+    #@user.ip = @localisation
     @precise = "La Rochette"
-    @user.location = @precise
-    @localisation = request.ip
-    @user.ip = @localisation
     @user.save!
-    @dog = Dog.find(params[:id])
+    @user_precise_location = {lat: Geocoder.search(@precise).first.latitude,
+                              lng: Geocoder.search(@precise).first.longitude,
+                              image_url: helpers.asset_url("human_marker.png")
+                              }
+    @dog_precise_location = { lat: @dog.latitude, lng: @dog.longitude, image_url: helpers.asset_url("dog.png") }
+    @markers = [@user_precise_location, @dog_precise_location]
     @comment = Comment.new
     @comments = Comment.all
   end
@@ -67,7 +75,7 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-    params.require(:dog).permit(:gender, :age, :race, :height, :name, :description, photos: [])
+    params.require(:dog).permit(:gender, :age, :race, :height, :name, :description, :address, photos: [])
   end
 
 

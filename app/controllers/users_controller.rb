@@ -8,11 +8,13 @@ class UsersController < ApplicationController
     # @results = @results.first.address
     # @user.address = @results
     # @user.save!
+
     @dogs = Dog.all
     @markers = @dogs.geocoded.map do |dog|
       {
         lat: dog.latitude,
-        lng: dog.longitude
+        lng: dog.longitude,
+        image_url: helpers.asset_url("dog.png")
       }
     end
   end
