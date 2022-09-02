@@ -28,10 +28,10 @@ class DogsController < ApplicationController
     #@user.location = @precise
     #@localisation = request.ip
     #@user.ip = @localisation
-    @precise = "La Rochette"
+    @precise = "la Rochette"
     @user.save!
-    @user_precise_location = {lat: Geocoder.search(@localisation).first.latitude,
-                              lng: Geocoder.search(@localisation).first.longitude,
+    @user_precise_location = {lat: Geocoder.search(@precise).first.latitude,
+                              lng: Geocoder.search(@precise).first.longitude,
                               image_url: helpers.asset_url("human_marker.png")
                               }
     @dog_precise_location = { lat: @dog.latitude, lng: @dog.longitude, image_url: helpers.asset_url("dog.png") }
