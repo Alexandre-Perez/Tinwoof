@@ -19,6 +19,7 @@ class DogsController < ApplicationController
   def new
     @dogs = Dog.all
     @dog = Dog.new
+    @comments = Comment.all
   end
 
   def show
@@ -28,7 +29,7 @@ class DogsController < ApplicationController
     #@user.location = @precise
     #@localisation = request.ip
     #@user.ip = @localisation
-    @precise = "la Rochette"
+    @precise = "La Rochette"
     @user.save!
     @user_precise_location = {lat: Geocoder.search(@precise).first.latitude,
                               lng: Geocoder.search(@precise).first.longitude,
@@ -74,7 +75,7 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-    params.require(:dog).permit(:gender, :age, :race, :height, :name, :description, photos: [])
+    params.require(:dog).permit(:gender, :age, :race, :height, :name, :description, :address, photos: [])
   end
 
 
