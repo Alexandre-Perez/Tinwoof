@@ -23,6 +23,8 @@ class UsersController < ApplicationController
   def show
     @dogs = current_user.dogs
     @user = current_user
+    @user.address = "La Rochette"
+    @user.save!
   end
 
 end

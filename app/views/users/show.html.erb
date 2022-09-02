@@ -2,7 +2,7 @@
 <%= @user.first_name %>
 <%= @user.last_name %>
 <%= @user.email %>
-<p>My current Position is at : <%= @user.location %></p>
+<p>My current Position is at : <%= @user.address %></p>
 <%= cl_image_tag @user.photo.key, crop: :fill %>
 <h1>My reviews</h1>
 <ul>
