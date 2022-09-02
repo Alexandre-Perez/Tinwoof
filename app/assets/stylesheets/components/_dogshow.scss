@@ -1,9 +1,26 @@
-.photoprofile{
-  width: 100px;
-  height: 100px;
+.photoprofile {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
-
+.photocontainer{
+  object-fit: cover;
+}
 .mapshowdog{
   width: 100px;
   height: 100px;
+  position: relative;
+}
+
+.supertitle{
+  margin: 20px 0;
+  // margin-top: 20px;
+  // margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+p {
+
 }
