@@ -1,24 +1,19 @@
-<%= link_to "You Have a new pet click here !", new_dog_path %>
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.email %>
-<p>My current Position is at : <%= @user.address %></p>
-<%= cl_image_tag @user.photo.key, crop: :fill %>
-<h1>My reviews</h1>
-<ul>
+<%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
+<%= link_to "You Have a new pet click here !", new_dog_path, class: "btn btn-primary w-100 my-5" %>
+<p><i class="fa-solid fa-file-signature"></i> : <%= @user.first_name %></p>
+<p><i class="fa-solid fa-file-signature"></i> : <%= @user.last_name %></p>
+<p><i class="fa-regular fa-envelope"></i> : <%= @user.email %></p>
+<p><i class="fa-solid fa-map-location-dot"></i> : <%= @user.address %></p>
+
+<h2>My reviews <i class="fa-regular fa-comments"></i></h2>
+<hr>
 <% @dogs.each do |dog| %>
   <% dog.comments.each do |comment| %>
-    <%# <% if comment.dog_id == @dog.id && @dog.user_id == current_user.id%>
-    <li><%= comment.content %></li>
-    <%# <% end %>
-  <% end %>
+    <p><i class="fa-regular fa-comment-dots"></i> : <%= comment.content %></p>
 <% end %>
-</ul>
-
-<h1>My Dogsssssss :</h1>
-
-<ul>
+<% end %>
+<h2>My Dogs 🐶</h2>
+<hr>
 <% @dogs.each do |dog| %>
-  <li><%= link_to dog.name, edit_dog_path(dog) %></li>
+  <p><i class="fa-solid fa-dog"></i> : <%= link_to dog.name, edit_dog_path(dog), class:"doog" %></p>
 <% end %>
-</ul>
