@@ -40,8 +40,10 @@
 <hr class="my-4">
 <div class="my-4">
 <% @comments.each do |comment| %>
+<% if @dog.id == comment.dog_id %>
 <i class="fa-solid fa-comment"></i>
 <%= comment.content %>
+<% end %>
 <% end %>
 </div>
 
