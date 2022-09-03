@@ -27,10 +27,24 @@
   <p><%= @dog.address %></p>
 </div>
 
+<h2 class="my-3">Leave a review to <em><%= @dog.name %></em></h2>
+
+      <div class="my-4">
+        <% @comments.each do |comment| %>
+        <% if @dog.id == comment.dog_id %>
+        <i class="fa-solid fa-comment"></i>
+        <%= comment.content %>
+        <% end %>
+        <% end %>
+      </div>
+
+
 <hr class="my-4">
 
-<h2 class="my-3">Leave a review to <em><%= @dog.name %></em></h2>
-<%= simple_form_for([@dog, @comment]) do |f| %>
+<%= simple_form_for([@dog, @comment],
+data: {insert_in_list_target: "form",
+action: "submit->insert-in-list#send"
+}) do |f| %>
   <div class="form-inputs">
     <%= f.input :content, label: false, placeholder: "Say something" %>
     <%= f.button :submit, class: "btn btn-primary w-100" %>
@@ -38,14 +52,6 @@
 <% end %>
 
 <hr class="my-4">
-<div class="my-4">
-<% @comments.each do |comment| %>
-<% if @dog.id == comment.dog_id %>
-<i class="fa-solid fa-comment"></i>
-<%= comment.content %>
-<% end %>
-<% end %>
-</div>
 
 
 
