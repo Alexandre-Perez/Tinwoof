@@ -17,5 +17,5 @@
 <h2>My Dogs 🐶</h2>
 <hr>
 <% @dogs.each do |dog| %>
-  <p><i class="fa-solid fa-dog"></i> : <%= link_to dog.name, edit_dog_path(dog), class:"doog" %></p>
+  <p><%= cl_image_tag dog.photos.first.key, crop: :fill, :class => "imgdog" %>  <i class="fa-solid fa-dog"></i> : <%= link_to dog.name, edit_dog_path(dog), class:"doog" %></p>
 <% end %>
