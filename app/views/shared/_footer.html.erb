@@ -2,21 +2,16 @@
   <div class="footer-links justify-content-around p-2">
     <% if user_signed_in? %>
         <%= link_to dogs_path, class: "nav-link" do %>
-        <img width="60" src="/assets/index_dog.png" style="
-            border: solid 1px deepskyblue;
-            border-radius: 50%; ">
+        <i class="fa-solid fa-paw"></i>
         <% end %>
         <%= link_to users_path, class: "nav-link" do %>
-          <%= image_tag "location.png", width: 50 %>
-          <%# <%= current_user.first_name %>
+          <i class="fa-solid fa-map-location-dot"></i>
         <% end %>
-        <%= link_to user_path(current_user), class: "nav-link relative-box-image" do %>
-          <%= image_tag "avatar_profil.png", width: 40 %>
-          <%# <%= cl_image_tag user.photos.key, crop: :fill, class:"absolute-image"%>
-          <%# <%= current_user.first_name %>
+        <%= link_to user_path(current_user), class: "nav-link" do %>
+          <i class="fa-solid fa-id-badge"></i>
         <% end %>
         <%= link_to chatrooms_path, class: "nav-link" do %>
-          <img src= "https://zupimages.net/up/22/35/q6ro.png" style="width: 60px;">
+          <i class="fa-regular fa-envelope"></i>
         <% end %>
     <% else %>
       <a class="nav-link">
