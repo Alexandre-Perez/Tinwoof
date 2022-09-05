@@ -22,11 +22,10 @@
   <%= link_to "Chat with #{@dog.name}", chatroom_path, :class => "bouton-message" %>
 </div>
 
-<div class="containerd">
-<p class="dogdescription"><%= @dog.description %></p>
+<div class="containerd d-flex justify-content-center my-4">
+<p class="dogdescription "><%= @dog.description %></p>
 </div>
-<br>
-<br>
+
 <div class="d-flex justify-content-around superp">
 <span class="details2">
     <% if @dog.gender == "female" %>
@@ -56,7 +55,7 @@
 
 
 <br>
-<h2 class="d-flex justify-content-center my-2">Leave a review to <em><%= @dog.name %></em></h2>
+<h3 class="d-flex justify-content-center my-3">Leave a review to  <em>  <%= @dog.name %> </em> </h3>
 
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
@@ -69,7 +68,7 @@
 <br>
 
 
-<div style="width: 100%; height: 300px; margin: 0 auto;"
+<div style="width: 100%; height: 300px; margin-bottom: 85px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
