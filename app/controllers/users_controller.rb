@@ -6,7 +6,8 @@ class UsersController < ApplicationController
       {
         lat: dog.latitude,
         lng: dog.longitude,
-        image_url: helpers.asset_url("dog.png")
+        image_url: helpers.asset_url("dog.png"),
+        info_window: render_to_string(partial: "info_window", locals: { dog: dog })
       }
     end
   end

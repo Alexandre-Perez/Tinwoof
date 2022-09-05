@@ -19,8 +19,6 @@ class DogsController < ApplicationController
 
     #@user_location = "La Rochette"
     # @dogs = Dog.near(@user_location, 100)
-
-    @markers = @dogs.map { |dog| { lat: dog.latitude, lng: dog.longitude } }
   end
 
   def new
