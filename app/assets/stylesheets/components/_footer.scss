@@ -6,35 +6,19 @@
 .footer-links {
   display: flex;
   align-items: center;
-  border-radius: 15px;
-  background-color: #61A4BC;
-  box-shadow: 0px -1px 10px #47b5ff;
-}
-.footer-links a {
-  color: black;
-  opacity: 1;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #d23333;
-}
-
-.relative-box-image {
   position: relative;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px #DFF6FF;
+  overflow: hidden;
 }
 
-.absolute-image {
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 30px;
-  height: 30px;
-  transform: translate(-50%, 0%);
+.nav-link {
+  font-size: 30px;
+  color: #06283D;
+  padding: 10px;
+  opacity: 0.7;
 }
+

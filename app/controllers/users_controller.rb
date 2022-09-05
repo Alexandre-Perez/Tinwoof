@@ -1,14 +1,6 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    # @user = current_user
-    # @super = request.ip
-    # @user.ip = @super
-    # @results = Geocoder.search(@super)
-    # @results = @results.first.address
-    # @user.address = @results
-    # @user.save!
-
     @dogs = Dog.all
     @markers = @dogs.geocoded.map do |dog|
       {
@@ -17,7 +9,6 @@ class UsersController < ApplicationController
         image_url: helpers.asset_url("dog.png")
       }
     end
-
   end
 
   def show
@@ -26,5 +17,4 @@ class UsersController < ApplicationController
     @user.address = "La Rochette"
     @user.save!
   end
-
 end

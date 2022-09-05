@@ -26,10 +26,21 @@
   <p><%= @dog.description %></p>
   <p><%= @dog.address %></p>
 </div>
+<hr class="my-4">
+<h2 class="my-3">Leave a review to <em><%= @dog.name %></em></h2>
+<h2><%= pluralize @dog.comments.size, "review" %></h2>
+      <div class="my-4">
+        <% @comments.each do |comment| %>
+        <% if @dog.id == comment.dog_id %>
+        <i class="fa-solid fa-comment"></i>
+        <p><%= comment.content %> leave by : <%= @user.first_name %></p>
+        <% end %>
+        <% end %>
+      </div>
+
 
 <hr class="my-4">
 
-<h2 class="my-3">Leave a review to <em><%= @dog.name %></em></h2>
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
     <%= f.input :content, label: false, placeholder: "Say something" %>
@@ -38,12 +49,6 @@
 <% end %>
 
 <hr class="my-4">
-<div class="my-4">
-<% @comments.each do |comment| %>
-<i class="fa-solid fa-comment"></i>
-<%= comment.content %>
-<% end %>
-</div>
 
 
 

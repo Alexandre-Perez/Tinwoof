@@ -1,43 +1,51 @@
+// Carte du chien
+
+.card-group{
+  margin: 0 auto;
+}
+
 .link-dog {
   text-decoration: none;
 }
 
-.card-trip {
+.card {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px #DFF6FF;
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 15px;
 }
 
-.card-trip > img {
-  height: 200px;
+// elements a l'intérieur de la carte
+
+.card > img {
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-left: 3px;
+  color: #06283D
 }
 
-.card-trip p {
+.card p {
   font-size: 12px;
   opacity: 1;
-  margin: 0;
+  margin-left: 5px;
+  color: #06283D
 }
 
-.card-trip .card-trip-infos {
-  padding: 16px;
+.card .card-trip-infos {
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  // position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.fa-location-arrow {
+  color: #1363DF;
 }
