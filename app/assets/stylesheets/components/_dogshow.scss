@@ -1,10 +1,122 @@
+.photocontainer{
+  position: relative;
+}
+
 .photoprofile {
   width: 100%;
-  height: 300px;
+  height: 844px;
   object-fit: cover;
 }
-.photocontainer{
-  object-fit: cover;
+
+.supertitle{
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 550px;
+  left: 50px;
+}
+
+.details1{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 620px;
+  left: 60px;
+}
+
+.bouton-message{
+  font-size: 30px;
+  font-weight: lighter;
+  border: solid 1px white;
+  border-radius: 15px;
+  padding: 0 20px;
+  background-color: #FF7C7C;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 690px;
+  left: 50px;
+}
+
+.containerd{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.dogdescription{
+color: black;
+font-size: 17px;
+font-weight: lighter;
+margin: 0 auto;
+}
+
+.details2{
+  font-size: 20px;
+  font-weight: lighter;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background-color: #FEE0C0;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+}
+
+.addressdog{
+  font-size: 20px;
+  font-weight: lighter;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background-color: #FF7C7C;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+.superp{
+margin-top: 20px;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 110px;
+
+  .card {
+    display: inline-block;
+    background-color: #FEE0C0;
+    width: 230px;
+    height: 110px;
+    border-radius: 10px;
+  }
+
+  .supercomment{
+    color: black;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: justify;
+    margin-left: 60px;
+    margin-top: 40px;
+    }
+}
+.scrolling-wrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+.reviewdog{
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn{
+  background-color: #FF7C7C;
+  margin-left: 120px;
 }
 .mapshowdog{
   width: 100px;
@@ -12,9 +124,27 @@
   position: relative;
 }
 
-.supertitle{
-  margin: 20px 0;
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
+.textzone{
+  margin: 0 auto;
 }
+
+.wrapperp {
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 25px;
+ }
+
+// .container{
+//   position: relative;
+//   background: rgba(255, 255, 255, .3);
+//   margin-top: 30px;
+//   padding-bottom: 10px;
+//   border-radius: 20px;
+//   border-left: 1px solid rgba(255, 255, 255, .3);
+//   border-top: 1px solid rgba(255, 255, 255, .3);
+//   backdrop-filter: blur(10px);
+//   -webkit-backdrop-filter: blur(10px);
+//   -moz-backdrop-filter: blur(10px);
+//   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+//   z-index: 1;
+// }
