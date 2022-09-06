@@ -29,6 +29,7 @@ class DogsController < ApplicationController
     @dogs = Dog.all
     @dog = Dog.find(params[:id])
     @user = current_user
+    @users = User.find(params[:id])
 
     # If you want to localisate a user by his city
 

@@ -1,5 +1,4 @@
 
-
 <div class="photocontainer">
 <% if @dog.photos.length != 0 %>
   <%= cl_image_tag @dog.photos.first.key, :class => "photoprofile", crop: :fill %>
@@ -7,7 +6,7 @@
   <% else %>
           <p>no picture available for now ...</p>
   <% end %>
-  <%= link_to chatrooms_path, class: "messagelink" do %>
+  <%= link_to chatroom_path, class: "messagelink" do %>
         <% end %>
    <p class="supertitle"><%= @dog.name %>, <%= @dog.age %> yo</p>
 
@@ -19,7 +18,8 @@
     <% end %>
     | <%= @dog.race %>
     | <%= @dog.height %></p>
-  <%= link_to "Chat with #{@dog.name}", chatroom_path, :class => "bouton-message" %>
+
+  <%= link_to "Chat with #{@dog.name}", chatroom_path(@users.id), :class => "bouton-message" %>
 </div>
 
 <div class="containerd d-flex justify-content-center my-4">
@@ -56,6 +56,8 @@
 
 <br>
 <h3 class="d-flex justify-content-center my-3">Leave a review to  <em>  <%= @dog.name %> </em> </h3>
+
+
 
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
