@@ -1,12 +1,3 @@
-<style>
-body{
-  background-color: #B9005B;
-}
- .wrapper {
-  width: 85%;
-  margin: 0 auto;
- }
-</style>
 
 <div class="photocontainer">
 <% if @dog.photos.length != 0 %>
@@ -58,7 +49,7 @@ body{
 <% end %>
 <% end %>
 </div>
-</div>
+
 
 
 
@@ -80,3 +71,4 @@ body{
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
