@@ -5,10 +5,25 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Comment.destroy_all
-Dog.destroy_all
-User.destroy_all
-Chatroom.destroy_all
+if Rails.env.development?
+  puts "Delete all users"
+  User.destroy_all
+  puts "All users deleted"
+  end
+  puts "\nStart seeding\n\n"
+  puts "Create users"
+  dev = User.create!(email: 'test@test.com', password: 'azerty', first_name: 'Baby', last_name: 'Shark')
+  User.create!(email: 'mommy@shark.com', password: 'azerty', first_name: 'Mommy', last_name: 'Shark')
+  User.create!(email: 'daddy@shark.com', password: 'azerty', first_name: 'Daddy', last_name: 'Shark')
+  User.create!(email: 'grandma@shark.com', password: 'azerty', first_name: 'Grandma', last_name: 'Shark')
+  User.create!(email: 'grandpa@shark.com', password: 'azerty', first_name: 'Grandpa', last_name: 'Shark')
+  puts "Users created"
+  User.excluding(dev).each do |user|
+  Chatroom.create!(first_user: dev, second_user: user)
+  puts "Chatroom for #{dev.full_name} & #{user.full_name} created"
+  end
+  puts "\nSeeding finished"
+
 
 profile_picture = URI.open("app/assets/images/avatar_profil.png")
 
@@ -127,25 +142,3 @@ dogs[3].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
 file = URI.open("https://img2.storyblok.com/f/83829/1200x628/246b8b64fc/esperance-vie-chihuahua.jpg")
 dogs[4].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
-
-chatrooms = Chatroom.create!([
-  {
-    name: "Chatroom with #{users[4].first_name}"
-  },
-
-  {
-    name: "Chatroom with #{users[2].first_name}"
-  },
-
-  {
-    name: "Chatroom with #{users[3].first_name}"
-  },
-
-  {
-    name: "Chatroom with #{users[1].first_name}"
-  },
-
-  {
-    name: "Chatroom with #{users[0].first_name}"
-  },
-])

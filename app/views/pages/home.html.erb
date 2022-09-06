@@ -4,3 +4,9 @@
 <%= link_to "Profile", new_dog_path %>
 
 <%= link_to "Home", dogs_path %>
+
+<% if user_signed_in? %>
+<%= link_to "My chatrooms", chatrooms_path, class: 'btn btn-primary mx-auto' %>
+<% else %>
+<%= link_to 'Log in', new_user_session_path, class: 'btn btn-primary mx-auto' %>
+<% end %>

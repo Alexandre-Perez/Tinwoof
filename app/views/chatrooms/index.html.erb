@@ -1,6 +1,11 @@
 <h1>My Chatrooms : </h1>
 
-
-<%= @messages.each do |message| %>
-  <%= message.content  %>
+<% @chatrooms.each do |chatroom| %>
+  <%= link_to chatroom_path(chatroom) do %>
+  <div class="card mb-1">
+    <div class="card-body">
+      <%= chatroom.interlocutor_of(current_user).full_name %>
+    </div>
+  </div>
+  <% end %>
 <% end %>

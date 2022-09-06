@@ -1,30 +1,33 @@
 class MessagesController < ApplicationController
-  def new
-    @message = Message.new
-  end
 
   def create
-    @chatroom = Chatroom.find(params[:chatroom_id])
+    chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
-    @message.chatroom = @chatroom
     @message.user = current_user
+    @message.chatroom = chatroom
     if @message.save
-      ChatroomChannel.broadcast_to(
-        @chatroom,
-        render_to_string(partial: "message", locals: { message: @message })
-      )
-      head :ok
+    # this is the part that we need to update
+    ChatroomChannel.broadcast_to(
+    chatroom,
+    {
+    html: render_to_string(partial: "message", locals: { message: @message }),
+    # broadcast the current_user's id so it is possible to verify in the
+    # stimulus controller if it corresponds or not with
+    # the client's current_user
+    user_id: @message.user.id,
+    user_name: @message.user.full_name
+    }
+    )
+    head :ok
     else
-      render "chatrooms/show", status: :unprocessable_entity
+    render 'chatrooms#show', status: :unprocessable_entity
     end
-  end
+    end
 
-  def destroy
-  end
+    private
 
-  private
-
-  def message_params
+    def message_params
     params.require(:message).permit(:content)
-  end
+    end
+
 end
