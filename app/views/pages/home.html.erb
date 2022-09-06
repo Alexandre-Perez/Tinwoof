@@ -1,12 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<%= link_to "Profile", new_dog_path %>
+<div>
+  <div class="background">
+    <% if user_signed_in? %>
+      <%= link_to 'Welcome', dogs_path, class: "btn" %>
+    <% else %>
+      <%= link_to 'Log in', new_user_session_path, class: 'btn btn-primary mx-auto' %>
+    <% end %>
+      <div class="color-footer ">
+  </div>
+</div>
 
-<%= link_to "Home", dogs_path %>
-
-<% if user_signed_in? %>
-<%= link_to "My chatrooms", chatrooms_path, class: 'btn btn-primary mx-auto' %>
-<% else %>
-<%= link_to 'Log in', new_user_session_path, class: 'btn btn-primary mx-auto' %>
-<% end %>
