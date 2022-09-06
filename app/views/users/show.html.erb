@@ -26,7 +26,7 @@
 <div class="d-flex justify-content-center">
 <% @dogs.each do |dog| %>
   <% dog.comments.each do |comment| %>
-    <p>"<%= comment.content %>"</p>
+    <p>"<%= comment.content %>" for <i class="fa-solid fa-dog"></i> <%= dog.name %> by <i class="fa-regular fa-user"></i>  <%= comment.user.first_name %></p>
 <% end %>
 <% end %>
 </div>
