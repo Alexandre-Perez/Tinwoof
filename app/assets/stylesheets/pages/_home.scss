@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("tinywoof.png");
+  background-size: contain;
+}
+
+.btn {
+  background-color: #28353f;
+  color: white;
+}
+
+.color-footer {
+  // bottom-color: 85px;
+  // height: 85px;
+  background-color: black;
+}

@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
     current_user.update_attribute(:last_seen_at, Time.current)
   end
 
+  private
+
+  def after_sign_in_path_for(resource)
+    authenticated_user_path
+  end
+
 end
