@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_174919) do
     t.bigint "second_user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["first_user_id"], name: "index_chatrooms_on_first_user_id"
     t.index ["second_user_id"], name: "index_chatrooms_on_second_user_id"
   end
@@ -113,5 +114,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_174919) do
   add_foreign_key "comments", "dogs"
   add_foreign_key "comments", "users"
   add_foreign_key "dogs", "users"
+  add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
 end
