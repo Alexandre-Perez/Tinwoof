@@ -23,22 +23,30 @@
 </div>
 <br>
 
+
+
+
+
+
 <div class="d-flex justify-content-center">
-<% @dogs.each do |dog| %>
+<div class="scrolling-wrapperre">
+
+  <% @dogs.each do |dog| %>
   <% dog.comments.each do |comment| %>
-    <p>"<%= comment.content %>" for <i class="fa-solid fa-dog"></i> <%= dog.name %> by <i class="fa-regular fa-user"></i>  <%= comment.user.first_name %></p>
+  <div class="carda">
+  <p class="contentcaroussel">"<%= comment.content %>"</p>
+  <p class="content2"> <i class="fa-solid fa-dog"></i> <%= dog.name %></p>
+  <p class="content2"> <i class="fa-regular fa-user"></i>  <%= comment.user.first_name %></p>
+  </div>
 <% end %>
 <% end %>
 </div>
-
+</div>
+<br>
 <div class="d-flex justify-content-center my-3">
 <i class="fa-solid fa-dog supercommenticon"></i>
 </div>
-<br>
-
-
-
-<div class="divphotos d-flex justify-content-center flex-direction: column">
+<div class="divphotos d-flex justify-content-center">
 <% @dogs.each do |dog| %>
  <%= link_to edit_dog_path(dog), class: "superlink" do%>
   <%= cl_image_tag dog.photos.first.key, crop: :fill, :class => "imgdog" %>

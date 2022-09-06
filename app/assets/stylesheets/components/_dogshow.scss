@@ -1,8 +1,11 @@
 .photocontainer{
   position: relative;
-  width: 100%;
 }
-
+.photoprofile {
+  width: 100%;
+  height: calc(100vh - 85px);
+  object-fit: cover;
+}
 .supertitle{
   font-size: 45px;
   font-weight: bold;

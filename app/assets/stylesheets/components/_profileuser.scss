@@ -62,3 +62,34 @@
   font-weight: bolder;
   margin-top: 15px;
 }
+
+
+.scrolling-wrapperre {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 0 20px;
+
+  .carda {
+    display: inline-block;
+  }
+}
+
+.carda{
+  text-align: justify;
+  width: 220px;
+  height: 120px;
+  background-color: #ff7c7cb0;
+  border-radius: 15px;
+}
+
+.contentcaroussel{
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  margin-top: 5px;
+}
+
+.content2{
+  margin-left: 5px;
+}
