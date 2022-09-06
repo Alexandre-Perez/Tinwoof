@@ -1,5 +1,8 @@
+<div class="wrapperre">
 <% if @user.photo.attached? %>
   <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
+<% else %>
+<p>No Photo</p>
 <% end %>
 <%= link_to "You Have a new pet click here !", new_dog_path, class: "btn btn-primary w-100 my-5" %>
 <p><i class="fa-solid fa-file-signature"></i> : <%= @user.first_name %></p>
@@ -19,3 +22,4 @@
 <% @dogs.each do |dog| %>
   <p><%= cl_image_tag dog.photos.first.key, crop: :fill, :class => "imgdog" %>  <i class="fa-solid fa-dog"></i> : <%= link_to dog.name, edit_dog_path(dog), class:"doog" %></p>
 <% end %>
+</div>

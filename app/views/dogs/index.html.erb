@@ -1,23 +1,21 @@
 <style>
 body{
-  background-color: #B9005B;
 }
 .wrapper {
   width: 85%;
   margin: 0 auto;
-  height: calc(100vh - 85px);
-  overflow: scroll;
+  margin-bottom: 85px;
  }
 </style>
 
 
-<div class="wrapper">
+
 <div class="m-2">
  <%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
-
+<div class="wrapper">
   <% @dogs.each do |dog| %>
     <%= link_to dog_path(dog), class: "link-dog" do %>
     <div class="card-group">
