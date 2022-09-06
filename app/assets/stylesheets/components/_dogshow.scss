@@ -40,16 +40,11 @@
   left: 50px;
 }
 
-.containerd{
-  display: inline-block;
-  margin: 0 auto;
-}
-
 .dogdescription{
 color: black;
-font-size: 17px;
-font-weight: lighter;
-margin: 0 auto;
+font-size: 20px;
+font-weight: 200;
+text-align: justify;
 }
 
 .details2{
@@ -117,6 +112,7 @@ margin-top: 20px;
 .btn{
   background-color: #FF7C7C;
   margin-left: 120px;
+  border-radius: 15px;
 }
 .mapshowdog{
   width: 100px;
@@ -124,8 +120,12 @@ margin-top: 20px;
   position: relative;
 }
 
-.textzone{
+.form-control{
+  width: 300px;
   margin: 0 auto;
+  border-radius: 25px;
+  padding: 0 25px;
+  border: solid 1px #B9005B;
 }
 
 .wrapperp {
