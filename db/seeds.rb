@@ -13,7 +13,7 @@ if Rails.env.development?
   puts "\nStart seeding\n\n"
   puts "Create users"
   dev = User.create!(email: 'test@test.com', password: 'azerty', first_name: 'Baby', last_name: 'Shark')
-  User.create!(email: 'mommy@shark.com', password: 'azerty', first_name: 'Mommy', last_name: 'Shark')
+  User.create!(email: 'mommy@sharkk.com', password: 'azerty', first_name: 'Mommy', last_name: 'Shark')
   User.create!(email: 'daddy@shark.com', password: 'azerty', first_name: 'Daddy', last_name: 'Shark')
   User.create!(email: 'grandma@shark.com', password: 'azerty', first_name: 'Grandma', last_name: 'Shark')
   User.create!(email: 'grandpa@shark.com', password: 'azerty', first_name: 'Grandpa', last_name: 'Shark')
