@@ -14,9 +14,7 @@ if Rails.env.development?
   puts "Create users"
   dev = User.create!(email: 'yassinou@gmail.com', password: 'azerty', first_name: 'Yassine', last_name: 'Bébou')
 
-
 profile_picture = URI.open("app/assets/images/avatar_profil.png")
-
 
 users = User.create!([
   {
@@ -216,7 +214,7 @@ dogs = Dog.create!([
 
   {
     user: users[6],
-    name: "Canichou",
+    name: "Canou",
     gender: "Male",
     age: "5",
     race: "Caniche",
@@ -282,7 +280,7 @@ dogs = Dog.create!([
 
   {
     user: users[12],
-    name: "Dumbledore",
+    name: "Dumble",
     gender: "Female",
     age: "13",
     race: "Griffon bruxellois",
@@ -312,7 +310,6 @@ dogs = Dog.create!([
     address: "4 Rue Crillon, Paris",
     description: "Mon chien haha trop bien lol"
   },
-
 ])
 
 
@@ -360,3 +357,11 @@ dogs[13].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
 file = URI.open("https://images.unsplash.com/photo-1609114450169-f0656f84799e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
 dogs[14].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
+
+users.each do |user|
+  file = URI.open("https://source.unsplash.com/random/?profil")
+  user.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+end
+
+file = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1655375912/mkaw4z5yjw3kougbrovu.jpg")
+dev.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
