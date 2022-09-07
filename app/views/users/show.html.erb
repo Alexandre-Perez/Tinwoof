@@ -8,7 +8,7 @@
 <% if @user.photo.attached? %>
   <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
 <% else %>
-  <%= image_tag ("logo.jpeg"), :class => "img_preview" %>
+  <p>No Photo Available for now ... </p>
 <% end %>
 </div>
 <br>
