@@ -7,7 +7,7 @@
 <% if chatroom.interlocutor_of(current_user).photo.attached? %>
   <%= cl_image_tag chatroom.interlocutor_of(current_user).photo.key, class:"photopresent" %>
 <% else %>
-<%= image_tag ("logo.jpeg"), class:"photononpresent" %>
+<p>No Photo available for now ..</p>
 <p class="messagedetails"><%= chatroom.interlocutor_of(current_user).first_name %></p>
   <% end %>
 <% end %>
