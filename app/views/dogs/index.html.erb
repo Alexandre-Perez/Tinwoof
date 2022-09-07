@@ -15,25 +15,25 @@ body{
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
-<div class="wrapper">
-  <% @dogs.each do |dog| %>
-    <%= link_to dog_path(dog), class: "link-dog" do %>
-    <div class="card-group">
-    <div class="card my-3">
-        <% if dog.photos.length != 0 %>
-          <%= cl_image_tag dog.photos.first.key, crop: :fill %>
-        <% else %>
-          <p>no picture</p>
-        <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= dog.name  %></h2>
-              <p><i class="fa-solid fa-location-arrow"></i> <%= dog.address %></p>
+  <div class="wrapper">
+    <% @dogs.each do |dog| %>
+      <%= link_to dog_path(dog), class: "link-dog" do %>
+      <div class="card-group">
+      <div class="card my-3">
+          <% if dog.photos.length != 0 %>
+            <%= cl_image_tag dog.photos.first.key, crop: :fill %>
+          <% else %>
+            <p>no picture</p>
+          <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= dog.name  %></h2>
+                <p><i class="fa-solid fa-location-arrow"></i> <%= dog.address %></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
-</div>
+  </div>
 </div>
