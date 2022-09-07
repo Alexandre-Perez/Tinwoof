@@ -1,5 +1,6 @@
 <style>
 body{
+  background: linear-gradient(#FEE0C0, #FF7C7C);
 }
 .wrapper {
   width: 85%;
@@ -11,10 +12,13 @@ body{
 
 
 <div class="m-2">
- <%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
-  <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"])  %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+<div class="d-flex justify-content-center my-4">
+<%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
+  <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"]), class:"superbttn"  %>
+    <%= submit_tag "Search", class: "btn btn-dark btn-outline-white" %>
   <% end %>
+  </div>
+
   <div class="wrapper">
     <% @dogs.each do |dog| %>
       <%= link_to dog_path(dog), class: "link-dog" do %>
