@@ -1,11 +1,18 @@
-<h1>My Chatrooms : </h1>
+<h1>DM's 🐶 : </h1>
+
 
 <% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom_path(chatroom) do %>
-  <div class="card mb-1">
-    <div class="card-body">
-      <%= chatroom.interlocutor_of(current_user).full_name %>
-    </div>
-  </div>
+<div class="carde">
+<%= link_to chatroom_path(chatroom), class:"supeer" do %>
+<% if chatroom.interlocutor_of(current_user).photo.attached? %>
+  <%= cl_image_tag chatroom.interlocutor_of(current_user).photo.key, class:"photopresent" %>
+<% else %>
+<%= image_tag ("logo.jpeg"), class:"photononpresent" %>
+<p class="messagedetails"><%= chatroom.interlocutor_of(current_user).first_name %></p>
   <% end %>
 <% end %>
+<% end %>
+</div>
+
+<div class="pieges">
+</div>
