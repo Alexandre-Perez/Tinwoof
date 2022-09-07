@@ -1,27 +1,34 @@
 .photocontainer{
-  position: relative;
+  width: 100%;
+  height: calc(100vh - 84px);
+}
+
+.elementscontain{
+  width: 100%;
+  height: 100%;
+  position:relative
+}
+
+.detailscontain{
+position:absolute;
+top:600px;
+left: 20px;
 }
 .photoprofile {
   width: 100%;
-  height: calc(100vh - 85px);
   object-fit: cover;
+  height: 100%;
 }
 .supertitle{
   font-size: 45px;
   font-weight: bold;
   color: white;
-  position: absolute;
-  top: 78%;
-  left: 20%;
 }
 
 .details1{
   font-size: 20px;
   font-weight: bold;
   color: white;
-  position: absolute;
-  top: 86%;
-  left: 20%;
 }
 
 .bouton-message{
@@ -33,11 +40,11 @@
   background-color: #FF7C7C;
   text-decoration: none;
   color: white;
-  position: absolute;
-  top: 92%;
-  left: 20%;
 }
-
+.superbidule{
+  margin: 0 auto;
+  display: inline-block;
+}
 .dogdescription{
 color: black;
 font-size: 20px;

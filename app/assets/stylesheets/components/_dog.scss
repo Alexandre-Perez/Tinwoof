@@ -2,7 +2,7 @@
 
 
 .card-group{
-  margin: 0 auto;
+   margin: 30px auto;
 }
 
 .link-dog {
@@ -14,7 +14,7 @@
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px #DFF6FF;
+  box-shadow: 0 0 15px #fee0c0b7;
   overflow: hidden;
 }
 
@@ -24,24 +24,25 @@
   height: 150px;
   width: 100%;
   object-fit: cover;
+  border-bottom: 1px solid #fee0c0b7;
 }
 
 .card h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-left: 3px;
   color: #820000
 }
 
 .card p {
-  font-size: 12px;
+  font-size: 14px;
   opacity: 1;
   margin-left: 5px;
   color: #B9005B
 }
 
 .card .card-trip-infos {
-  padding: 5px;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -49,9 +50,17 @@
 
 .fa-location-arrow {
   color: #1363DF;
+  font-size: 15px;
+  opacity: 0.8;
 }
 
 .wrapper {
   width: 85%;
   margin: 0 auto;
  }
+
+.soupere{
+  border-radius: 25px;
+  margin-left: 20px;
+  border: 1px solid #B9005B;
+}
