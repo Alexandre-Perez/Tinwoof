@@ -5,5 +5,6 @@ class CreateChatrooms < ActiveRecord::Migration[7.0]
       t.references :second_user, index: true, foreign_key: { to_table: :users }, null: false
       t.timestamps
     end
+    add_reference :messages, :chatroom, null: false, foreign_key: true
   end
 end
