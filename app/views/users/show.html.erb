@@ -1,21 +1,60 @@
+
+<div class="d-flex justify-content-center">
+<h1 class="titlemain">Hello <%= @user.first_name %>, and Welcome !</h1>
+</div>
+
+
+<div class="d-flex justify-content-center">
 <% if @user.photo.attached? %>
   <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
+<% else %>
+<p>No Photo</p>
 <% end %>
-<%= link_to "You Have a new pet click here !", new_dog_path, class: "btn btn-primary w-100 my-5" %>
-<p><i class="fa-solid fa-file-signature"></i> : <%= @user.first_name %></p>
-<p><i class="fa-solid fa-file-signature"></i> : <%= @user.last_name %></p>
-<p><i class="fa-regular fa-envelope"></i> : <%= @user.email %></p>
-<p><i class="fa-solid fa-map-location-dot"></i> : <%= @user.address %></p>
+</div>
+<br>
+<div class="d-flex justify-content-center">
+<%= link_to new_dog_path, class: "newdog" do %>
+  <p><i class="fa-solid fa-plus"></i>  New Dog ?</p>
+<% end %>
+</div>
+<br>
+<div class="d-flex justify-content-center my-3">
+<i class="fa-regular fa-comment-dots supercommenticon"></i>
+</div>
+<br>
 
-<h2>My reviews <i class="fa-regular fa-comments"></i></h2>
-<hr>
-<% @dogs.each do |dog| %>
+
+
+
+
+
+<div class="d-flex justify-content-center">
+<div class="scrolling-wrapperre">
+
+  <% @dogs.each do |dog| %>
   <% dog.comments.each do |comment| %>
-    <p><i class="fa-regular fa-comment-dots"></i> : <%= comment.content %></p>
+  <div class="carda">
+  <p class="contentcaroussel">"<%= comment.content %>"</p>
+  <p class="content2"> <i class="fa-solid fa-dog"></i> <%= dog.name %></p>
+  <p class="content2"> <i class="fa-regular fa-user"></i>  <%= comment.user.first_name %></p>
+  </div>
 <% end %>
 <% end %>
-<h2>My Dogs 🐶</h2>
-<hr>
+</div>
+</div>
+<br>
+<div class="d-flex justify-content-center my-3">
+<i class="fa-solid fa-dog supercommenticon"></i>
+</div>
+<div class="divphotos d-flex justify-content-center">
 <% @dogs.each do |dog| %>
-  <p><%= cl_image_tag dog.photos.first.key, crop: :fill, :class => "imgdog" %>  <i class="fa-solid fa-dog"></i> : <%= link_to dog.name, edit_dog_path(dog), class:"doog" %></p>
+ <%= link_to edit_dog_path(dog), class: "superlink" do%>
+  <%= cl_image_tag dog.photos.first.key, crop: :fill, :class => "imgdog" %>
 <% end %>
+<% end %>
+</div>
+
+
+
+<div class="piege">
+</div>

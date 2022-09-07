@@ -1,4 +1,3 @@
-
 <div class="photocontainer">
 <% if @dog.photos.length != 0 %>
   <%= cl_image_tag @dog.photos.first.key, :class => "photoprofile", crop: :fill %>
@@ -22,6 +21,9 @@
   <%= link_to "Chat with #{@dog.name}", chatroom_path(@users.id), :class => "bouton-message" %>
 </div>
 
+
+
+
 <div class="containerd d-flex justify-content-center my-4">
 <p class="dogdescription "><%= @dog.description %></p>
 </div>
@@ -42,13 +44,14 @@
 <br>
 <br>
 
-<div class="wrapperp">
+<div class="wrapperp d-flex justify-content-center">
 <div class="scrolling-wrapper">
 <% @comments.each do |comment| %>
 <% if @dog.id == comment.dog_id %>
 <div class="card"><p class="supercomment">"<%= comment.content %>"</p></div>
 <% end %>
 <% end %>
+</div>
 </div>
 
 
@@ -62,7 +65,7 @@
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
     <%= f.input :content, label: false, placeholder: "Say something to #{@dog.name} ...", class: "textzone" %>
-    <%= f.button :submit, class: "btn w-80 " %>
+    <%= f.button :submit, class: "btn w-80 d-flex justify-content-center" %>
   </div>
 <% end %>
 
@@ -70,7 +73,7 @@
 <br>
 
 
-<div style="width: 100%; height: 300px; margin-bottom: 85px;"
+<div style="width: 100%; height: 300px; margin-bottom: 80px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
