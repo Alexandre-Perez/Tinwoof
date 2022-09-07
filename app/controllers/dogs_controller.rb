@@ -47,7 +47,7 @@ class DogsController < ApplicationController
     @user.save!
     @user_precise_location = {lat: Geocoder.search(@localisation).first.latitude,
                               lng: Geocoder.search(@localisation).first.longitude,
-                              image_url: helpers.asset_url("human_marker.png")
+                              image_url: helpers.asset_url("avatar_profil.png")
                               }
 
     @dog_precise_location = { lat: @dog.latitude, lng: @dog.longitude, image_url: helpers.asset_url("dog.png") }
