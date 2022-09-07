@@ -1,9 +1,11 @@
 // Specific CSS for your home-page
-.background {
+.background-img {
   width: 100vw;
   height: 100vh;
   background-image: url("tinywoof.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .btn {
@@ -11,8 +13,6 @@
   color: white;
 }
 
-.color-footer {
-  // bottom-color: 85px;
-  // height: 85px;
-  background-color: black;
-}
+// .input{
+//   margin-bottom: 0 !important;
+// }
