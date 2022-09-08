@@ -14,17 +14,17 @@
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
   border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 80px #DFF6FF;
+  box-shadow: 0 0 7px rgba(14, 14, 14, 0.5);
   overflow: hidden;
 }
 
 // elements a l'intérieur de la carte
 
-.card > img {
-  height: 150px;
-  width: 100%;
-  object-fit: cover;
-}
+// .card > img {
+//   height: 150px;
+//   width: 100%;
+//   object-fit: cover;
+// }
 
 .card h2 {
   font-size: 16px;
@@ -51,7 +51,12 @@
   color: #1363DF;
 }
 
-.wrapper {
-  width: 85%;
-  margin: 0 auto;
+// .wrapper {
+//   width: 85%;
+//   margin: 0 auto;
+//  }
+
+.superbttn{
+  border-radius: 200px;
+  margin-right: 10px;
  }

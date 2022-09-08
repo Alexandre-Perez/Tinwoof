@@ -11,7 +11,7 @@ body{
 
 
 
-<div class="m-2">
+<div class="m-3">
 <div class="d-flex justify-content-center my-4">
 <%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"]), class:"superbttn"  %>
@@ -19,7 +19,7 @@ body{
   <% end %>
   </div>
 
-  <div class="wrapper">
+  <div>
     <% @dogs.each do |dog| %>
       <%= link_to dog_path(dog), class: "link-dog" do %>
       <div class="card-group">
