@@ -96,23 +96,19 @@ h1 {
   color: #820000a2;
 }
 
-
-// .messager{
-//   position: absolute;
-//   top: 5px;
-//   left:340px;
-// }
-
 .finalbuttona{
-  background-color: #820000;
-  padding: 5px 10px;
   border-radius: 25px;
-  border: 1px solid #f49292ca;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 7px rgba(14, 14, 14, 0.5);
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .commentsfonthihia{
-  font-size: 15px;
-  color: white;
+  font-size: 30px;
+  color: #f49292ca;
   font-weight: bold;
 }
 
