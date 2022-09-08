@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     root "dogs#index", as: :authenticated_user
   end
 
-  root to: "pages#home"
+  devise_scope :user do
+    root 'devise/sessions#new'
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
