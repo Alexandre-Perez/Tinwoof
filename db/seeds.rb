@@ -154,7 +154,7 @@ dogs = Dog.create!([
     race: "Chow-Chow",
     height: "50cm",
     address: "Paris 7th",
-    description: "Ma chienne est calme, elle aime les longues ballades"
+    description: "My dog is very calm 🌛 and loves to sleep and chill all day long . Don't be afraid send me a DM for a walk ..."
   },
 
   {
@@ -165,7 +165,7 @@ dogs = Dog.create!([
     race: "Bulldog",
     height: "40cm",
     address: "Marseille",
-    description: "Il est super joueur bien qu'il se fatigue vite"
+    description: "My dog is very playful and adore to walk at night in Le vieux port ... See yall !"
   },
 
   {
@@ -176,7 +176,7 @@ dogs = Dog.create!([
     race: "Akita Inu",
     height: "64cm",
     address: "Nanterre",
-    description: "Mon chien Hachikō est très fidèle, il m'attend toujours devant la gare !"
+    description: "The best dog ever ♥️🐶 ! Come to talk with me to discover more about me :)"
   },
 
   {
@@ -187,7 +187,7 @@ dogs = Dog.create!([
     race: "Golden Retriver",
     height: "61cm",
     address: "Evry",
-    description: "j'ai une collection de bâtons à la maison !😭"
+    description: "I have plenty of stick all around my house it's kinda mess sorry ... 😭"
   },
 
   {
@@ -198,7 +198,7 @@ dogs = Dog.create!([
     race: "Chihuahua",
     height: "16cm",
     address: "Nanterre",
-    description: "Mon chien ne craint pas les plus grands, il aboie mais ne mord pas !"
+    description: "My dog don't have afraid of big dogs, very talkative dog too ‼️ "
   },
 
   {
@@ -209,7 +209,7 @@ dogs = Dog.create!([
     race: "Dogue Allemand",
     height: "110cm",
     address: "Paris",
-    description: "Un pot de colle d'un calme olympien, il adore les papouilles"
+    description: "Very sticky dog, with lot of love to share all around ♥️ "
   },
 
   {
@@ -220,7 +220,7 @@ dogs = Dog.create!([
     race: "Caniche",
     height: "24cm",
     address: "35 Rue Brunel, Paris",
-    description: "Craintif au début mais super gentil et affecteux !"
+    description: "Very shy at the begining but after a while my dog is craaaaaazy hahaha 💫"
   },
 
   {
@@ -231,7 +231,7 @@ dogs = Dog.create!([
     race: "Husky",
     height: "45cm",
     address: "24 Rue des Vinaigriers, Paris",
-    description: "Elle est toujours partante pour sortir faire un footing !"
+    description: "Love sport and running get prepare with my dog to do intensive workout 🤭"
   },
 
   {
@@ -242,7 +242,7 @@ dogs = Dog.create!([
     race: "Staffordshire Bull Terrier",
     height: "35cm",
     address: "10 Place Edouard VII, Paris",
-    description: "Une préférence pour les gros chiens avec qui elle pourra se défouler"
+    description: "My dog prefer big dogs to play with but always open to other oportunities 😳"
   },
 
   {
@@ -253,7 +253,7 @@ dogs = Dog.create!([
     race: "Welsh Corgi",
     height: "25cm",
     address: "204 Rue de Charenton, Paris",
-    description: "Attachant et sociable, il adore faire des bêtises en groupe !"
+    description: "Very friendly and open to new meet 🥰"
   },
 
   {
@@ -264,7 +264,7 @@ dogs = Dog.create!([
     race: "Puli",
     height: "44cm",
     address: "102 Rue de Bercy, Paris",
-    description: "Souvent perché, la tête dans les nuages il part vagabonder et revient épuisé !"
+    description: "Always stone but my dog have so much qualities 😇"
   },
 
   {
@@ -275,7 +275,7 @@ dogs = Dog.create!([
     race: "Caniche Royal Abricot",
     height: "80cm",
     address: "74 Rue Amelot, Paris",
-    description: "Ma chienne est super gentil, très sociable, elle a toujours la pêche !"
+    description: "My dog is always at 100% of her energy 🥵 Never tired .. But me I AM 😤"
   },
 
   {
@@ -286,7 +286,7 @@ dogs = Dog.create!([
     race: "Griffon Bruxellois",
     height: "28cm",
     address: "16 Villa Gaudelet, Paris",
-    description: "Il a passé sa vie dans les foires à faire des tours incroyables !"
+    description: "He spent the most of his life to travel all around the world he's very open to meet other dogs 👍🏼"
   },
 
   {
@@ -297,7 +297,7 @@ dogs = Dog.create!([
     race: "Samoyède",
     height: "45cm",
     address: "136 Rue de la Pompe, Paris",
-    description: "Elle passe sa journée à chanter, à croire qu'elle est enfermée !❄️ "
+    description: "I don't know why but my dog love Frozen ❄️, for the name it's just a coincidence don't worry . She's a sweetheart ⛄️"
   },
 
   {
@@ -308,7 +308,7 @@ dogs = Dog.create!([
     race: "Shiba Inu",
     height: "28cm",
     address: "4 Rue Crillon, Paris",
-    description: "Mon chien arrive à sourire sur commande !"
+    description: "You want a smile on a demand ? Ask my dog, she'll give you her best smiles and woof 🥰"
   },
 ])
 
