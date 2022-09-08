@@ -22,7 +22,9 @@
 
 // elements a l'intérieur de la carte
 
-.card > img {
+ .card > img {
+  height: 500px;
+   width: 100%;
   object-fit: cover;
 }
 
