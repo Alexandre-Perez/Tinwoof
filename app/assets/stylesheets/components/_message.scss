@@ -1,11 +1,11 @@
 .message {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 
   .message-infos {
     display: flex;
     align-items: center;
     margin: 0 4px;
-    font-size: 0.75rem;
+    font-size: 0.40rem;
     color: rgb(200, 200, 200);
 
     p {
@@ -27,11 +27,12 @@
   .message-content {
     display: flex;
     p {
-    width: 80%;
-    margin: 0;
-    border: 1px rgb(200, 200, 200) solid;
+    margin-left: 5px;
+    border: 1px #FEE0C0 solid;
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 20px;
+    color: #814a66;
+    background-color: #FEE0C0;
     }
   }
 }
@@ -59,7 +60,8 @@ h1 {
 
 .input-group .btn {
   bottom: 1vh;
-  background-color: #B9005B;
+  background-color: #b9005cad;
+  border-radius: 25px;
 }
 
 .form-control {
@@ -69,19 +71,52 @@ h1 {
 .card-message {
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 20px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
 .card-message p {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
   opacity: 1;
-  margin-left: 5px;
-  color: #B9005B
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.particularmessage {
+  width: auto;
 }
 
 .title-message {
-  display: flex;
+  // display: flex;
   justify-content: center;
   margin-top: 30px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #820000a2;
+}
+
+
+// .messager{
+//   position: absolute;
+//   top: 5px;
+//   left:340px;
+// }
+
+.finalbuttona{
+  background-color: #820000;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: 1px solid #f49292ca;
+}
+
+.commentsfonthihia{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.messager{
+  margin-top: 30px;
+  margin-right: 5px;
 }
