@@ -3,8 +3,6 @@
 
 .card-group{
    margin: 30px auto;
-   height: 450px;
-   width: 200px;
 }
 
 .link-dog {
@@ -22,21 +20,23 @@
 
 // elements a l'intérieur de la carte
 
+
  .card > img {
   height: 500px;
    width: 100%;
+
   object-fit: cover;
 }
 
 .card h2 {
-  font-size: 18px;
+  font-size: 23px;
   font-weight: bold;
-  margin-left: 3px;
+  margin-left: 5px;
   color: #820000
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 16px;
   opacity: 1;
   margin-left: 5px;
   color: #B9005B
@@ -50,23 +50,30 @@
 }
 
 .fa-location-arrow {
-  color: #1363DF;
-  font-size: 15px;
+  color: #FF7C7C;
+  font-size: 16px;
   opacity: 0.8;
+  margin-left: 6px;
 }
 
-// .wrapper {
-//   width: 85%;
-//   margin: 0 auto;
-//  }
-
 .superbttn{
-  border-radius: 200px;
-  margin-right: 10px;
+  margin: 7px 41px 8px 0px;
+  border: #820000 1px solid;
+  border-radius: 13px;
  }
 
 .soupere{
   border-radius: 25px;
   margin-left: 20px;
   border: 1px solid #B9005B;
+}
+
+.mystere{
+  height: 85px;
+}
+
+.backgroundpicture{
+  width: 100%;
+  height: 100%;
+  background-image: url('indexback.png');
 }

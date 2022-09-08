@@ -1,25 +1,23 @@
 <style>
 body{
-  background: #FFF5E4;
 }
 .wrapper {
   width: 85%;
   margin: 0 auto;
-  margin-bottom: 85px;
  }
 </style>
 
 
-
-<div class="m-3">
-<div class="d-flex justify-content-center my-4">
-<%= form_with url: dogs_path, method: :get, class: "d-flex" do %>
+<div class="backgroundpicture">
+<div class="mx-3">
+<div class="d-flex justify-content-center">
+<%= form_with url: dogs_path, method: :get, class: "d-flex justify-content-between" do %>
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"]), class:"superbttn"  %>
     <%= submit_tag "Search", class: "btn btn-dark btn-outline-white" %>
   <% end %>
   </div>
 
-  <div>
+  <div class="scroll-container">
     <% @dogs.each do |dog| %>
       <%= link_to dog_path(dog), class: "link-dog" do %>
       <div class="card-group">
@@ -32,7 +30,7 @@ body{
             <div class="card-trip-infos">
               <div>
                 <h2><%= dog.name  %></h2>
-                <p><i class="fa-solid fa-location-arrow"></i> <%= dog.address %></p>
+                <p><i class="fa-solid fa-location-arrow"></i> <%= dog.address.split.last %></p>
               </div>
             </div>
           </div>
@@ -40,4 +38,8 @@ body{
         <% end %>
       <% end %>
   </div>
+</div>
+<div class="mystere">
+</div>
+</div>
 </div>

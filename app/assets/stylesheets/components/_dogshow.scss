@@ -8,6 +8,11 @@
   background-position: center;
 }
 
+.scroll-container {
+  height: 100vh;
+  overflow: scroll;
+}
+
 .elementscontain{
   text-align: center;
   margin-bottom: 20px;
@@ -160,4 +165,21 @@ margin-top: 20px;
   font-size: 22px;
   font-weight: bold;
   color: white;
+ }
+
+ .modal-title{
+  margin: 0 auto;
+ }
+
+ .finalbutton{
+  background-color: #FF7C7C;
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: 1px solid #f49292ca;
+ }
+
+ .commentsfonthihi{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
  }
