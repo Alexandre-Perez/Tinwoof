@@ -35,7 +35,7 @@ users = User.create!([
 
   {
     email: "merouane@gmail.com",
-    password: "merouane",
+    password: "123456",
     first_name: "Merouane",
     last_name: "Masaoudi",
     location: "Marseille"
@@ -43,23 +43,23 @@ users = User.create!([
 
   {
     email: "ueno@gmail.com",
-    password: "uenoueno",
+    password: "123456",
     first_name: "Hidesaburō",
     last_name: "Ueno",
     location: "Tokyo"
   },
 
   {
-    email: "alexander@gmail.com",
-    password: "alexander",
-    first_name: "Alexander",
+    email: "alexandre@gmail.com",
+    password: "123456",
+    first_name: "Alexandre",
     last_name: "Pépé",
     location: "Paris"
   },
 
   {
     email: "edouard@gmail.com",
-    password: "azertys",
+    password: "123456",
     first_name: "Édouard ",
     last_name: "Moreau",
     location: "Saint-Martin"
@@ -67,7 +67,7 @@ users = User.create!([
 
   {
     email: "finine@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Fifine",
     last_name: "Thériault",
     location: "Créteil"
@@ -75,7 +75,7 @@ users = User.create!([
 
   {
     email: "saindon@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Joséphine",
     last_name: "Saindon",
     location: "Nanterre"
@@ -83,7 +83,7 @@ users = User.create!([
 
   {
     email: "guillaume@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Guillaume",
     last_name: "D'Aoust",
     location: "Paris"
@@ -91,7 +91,7 @@ users = User.create!([
 
   {
     email: "catherine@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Catherine",
     last_name: "Blais",
     location: "Paris"
@@ -99,7 +99,7 @@ users = User.create!([
 
   {
     email: "julie@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Julie",
     last_name: "Desnoyers",
     location: "Paris"
@@ -107,7 +107,7 @@ users = User.create!([
 
   {
     email: "sennet@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Sennet",
     last_name: "Marleau",
     location: "Paris"
@@ -115,7 +115,7 @@ users = User.create!([
 
   {
     email: "somerville@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Somerville",
     last_name: "Gousse",
     location: "Paris"
@@ -123,7 +123,7 @@ users = User.create!([
 
   {
     email: "eloise@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Eloise ",
     last_name: "Martel",
     location: "Paris"
@@ -131,7 +131,7 @@ users = User.create!([
 
   {
     email: "dexter@gmail.com",
-    password: "alexander",
+    password: "123456",
     first_name: "Dexter",
     last_name: "Mailly",
     location: "Paris"
@@ -151,21 +151,21 @@ dogs = Dog.create!([
     name: "Chowy",
     gender: "Female",
     age: "10",
-    race: "Chow-chow",
-    height: "20cm",
-    address: "Paris",
-    description: "Mon chien haha trop bien lol"
+    race: "Chow-Chow",
+    height: "50cm",
+    address: "Paris 7th",
+    description: "Ma chienne est calme, elle aime les longues ballades"
   },
 
   {
     user: users[1],
     name: "Bull",
     gender: "Male",
-    age: "13",
+    age: "8",
     race: "Bulldog",
-    height: "10cm",
+    height: "40cm",
     address: "Marseille",
-    description: "Mon chien est très gentil"
+    description: "Il est super joueur bien qu'il se fatigue vite"
   },
 
   {
@@ -174,20 +174,20 @@ dogs = Dog.create!([
     gender: "Male",
     age: "10",
     race: "Akita Inu",
-    height: "25cm",
+    height: "64cm",
     address: "Nanterre",
-    description: "Mon chien Hachikō est très fidèle, il m'attend toujours devant la gare ! "
+    description: "Mon chien Hachikō est très fidèle, il m'attend toujours devant la gare !"
   },
 
   {
     user: users[3],
     name: "Croky",
     gender: "Female",
-    age: "8",
+    age: "7",
     race: "Golden Retriver",
-    height: "20cm",
+    height: "61cm",
     address: "Evry",
-    description: "Oui."
+    description: "j'ai une collection de bâtons à la maison !😭"
   },
 
   {
@@ -196,20 +196,20 @@ dogs = Dog.create!([
     gender: "Male",
     age: "13",
     race: "Chihuahua",
-    height: "20cm",
+    height: "16cm",
     address: "Nanterre",
-    description: "Mon chien haha trop bien lol"
+    description: "Mon chien ne craint pas les plus grands, il aboie mais ne mord pas !"
   },
 
   {
     user: users[5],
-    name: "Doguy",
+    name: "Zeus",
     gender: "Male",
-    age: "7",
-    race: "Dogue allemand",
-    height: "25cm",
-    address: "145 Rue Saint-Charles, Paris",
-    description: "Mon chien haha trop bien lol"
+    age: "10",
+    race: "Dogue Allemand",
+    height: "110cm",
+    address: "Paris",
+    description: "Un pot de colle d'un calme olympien, il adore les papouilles"
   },
 
   {
@@ -218,9 +218,9 @@ dogs = Dog.create!([
     gender: "Male",
     age: "5",
     race: "Caniche",
-    height: "20cm",
+    height: "24cm",
     address: "35 Rue Brunel, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Craintif au début mais super gentil et affecteux !"
   },
 
   {
@@ -228,10 +228,10 @@ dogs = Dog.create!([
     name: "Bucky",
     gender: "Female",
     age: "7",
-    race: "Husky ",
-    height: "10cm",
+    race: "Husky",
+    height: "45cm",
     address: "24 Rue des Vinaigriers, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Elle est toujours partante pour sortir faire un footing !"
   },
 
   {
@@ -239,32 +239,32 @@ dogs = Dog.create!([
     name: "Vidar",
     gender: "Female",
     age: "9",
-    race: "Staffordshire bull terrier",
-    height: "20cm",
+    race: "Staffordshire Bull Terrier",
+    height: "35cm",
     address: "10 Place Edouard VII, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Une préférence pour les gros chiens avec qui elle pourra se défouler"
   },
 
   {
     user: users[9],
-    name: "Ein",
-    gender: "Female",
-    age: "3",
-    race: "Corgi",
-    height: "17cm",
+    name: "Dookie",
+    gender: "Male",
+    age: "5",
+    race: "Welsh Corgi",
+    height: "25cm",
     address: "204 Rue de Charenton, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Attachant et sociable, il adore faire des bêtises en groupe !"
   },
 
   {
     user: users[10],
     name: "Puly",
     gender: "Male",
-    age: "2",
+    age: "10",
     race: "Puli",
-    height: "15cm",
+    height: "44cm",
     address: "102 Rue de Bercy, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Souvent perché, la tête dans les nuages il part vagabonder et revient épuisé !"
   },
 
   {
@@ -272,60 +272,60 @@ dogs = Dog.create!([
     name: "Simba",
     gender: "Female",
     age: "10",
-    race: "Caniche royal abricot",
+    race: "Caniche Royal Abricot",
     height: "80cm",
     address: "74 Rue Amelot, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Ma chienne est super gentil, très sociable, elle a toujours la pêche !"
   },
 
   {
     user: users[12],
     name: "Dumble",
-    gender: "Female",
+    gender: "Male",
     age: "13",
-    race: "Griffon bruxellois",
-    height: "10cm",
+    race: "Griffon Bruxellois",
+    height: "28cm",
     address: "16 Villa Gaudelet, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Il a passé sa vie dans les foires à faire des tours incroyables !"
   },
 
   {
     user: users[13],
-    name: "Glacy",
-    gender: "Male",
-    age: "13",
+    name: "Anna",
+    gender: "Female",
+    age: "10",
     race: "Samoyède",
-    height: "85cm",
+    height: "45cm",
     address: "136 Rue de la Pompe, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Elle passe sa journée à chanter, à croire qu'elle est enfermée !❄️ "
   },
 
   {
     user: users[14],
     name: "Tibo",
     gender: "Female",
-    age: "13",
+    age: "9",
     race: "Shiba Inu",
-    height: "20cm",
+    height: "28cm",
     address: "4 Rue Crillon, Paris",
-    description: "Mon chien haha trop bien lol"
+    description: "Mon chien arrive à sourire sur commande !"
   },
 ])
 
 
-file = URI.open("https://www.santevet.com/upload/admin/images/article/PMO/FICHES%20RACES/CHIENS/chowchow_assurance_sant%C3%A9vet.jpg")
+file = URI.open("https://images.unsplash.com/photo-1591300673309-092e8afa699b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
 dogs[0].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
-file = URI.open("https://jardinage.lemonde.fr/images/dossiers/2019-04/bulldog-133259.jpg")
+file = URI.open("https://images.unsplash.com/photo-1554254278-4e0a32570ec9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
 dogs[1].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
-file = URI.open("https://cdn.dogsplanet.com/wp-content/uploads/2020/09/hachiko-chien.jpg")
+file = URI.open("https://images.unsplash.com/photo-1618911392268-9fc29c67fc69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGFraXRhJTIwaW51fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60")
 dogs[2].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
-file = URI.open("https://static.wamiz.com/images/animaux/chiens/large/golden-retriever.jpg")
+file = URI.open("https://images.unsplash.com/photo-1561572903-ab17e3916acd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29sZGVuJTIwcmV0cmlldmVyJTIwc3RpY2t8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60")
 dogs[3].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
-file = URI.open("https://img2.storyblok.com/f/83829/1200x628/246b8b64fc/esperance-vie-chihuahua.jpg")
+file = URI.open("https://images.unsplash.com/photo-1563172320-c91f912fb5b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNoaWh1YWh1YXxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60")
 dogs[4].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
 file = URI.open("https://images.unsplash.com/photo-1533764625214-b97671494f23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
@@ -355,7 +355,7 @@ dogs[12].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 file = URI.open("https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
 dogs[13].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
-file = URI.open("https://images.unsplash.com/photo-1609114450169-f0656f84799e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+file = URI.open("https://images.unsplash.com/photo-1636291494567-2cde2d6f45d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFraXRhJTIwaW51fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60")
 dogs[14].photos.attach(io: file, filename: "nes.png", content_type: "image/png")
 
 users.each do |user|
