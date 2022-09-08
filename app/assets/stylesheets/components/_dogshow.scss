@@ -1,27 +1,33 @@
 .photocontainer{
-  position: relative;
+  width: 100%;
+  height: calc(100vh - 84px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
 }
+
+.elementscontain{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .photoprofile {
   width: 100%;
-  height: calc(100vh - 85px);
   object-fit: cover;
+  height: 100%;
 }
 .supertitle{
   font-size: 45px;
   font-weight: bold;
   color: white;
-  position: absolute;
-  top: 78%;
-  left: 20%;
 }
 
 .details1{
   font-size: 20px;
   font-weight: bold;
   color: white;
-  position: absolute;
-  top: 86%;
-  left: 20%;
 }
 
 .bouton-message{
@@ -29,20 +35,21 @@
   font-weight: lighter;
   border: solid 1px white;
   border-radius: 15px;
-  padding: 0 20px;
+  padding: 5px 20px;
   background-color: #FF7C7C;
   text-decoration: none;
   color: white;
-  position: absolute;
-  top: 92%;
-  left: 20%;
+}
+.dogdescription{
+color: #820000be;
+font-size: 20px;
+font-weight: bolder;
+margin: 0 auto;
 }
 
-.dogdescription{
-color: black;
-font-size: 20px;
-font-weight: 200;
-text-align: justify;
+.findugame{
+  margin: 0 auto;
+  text-align: center;
 }
 
 .details2{
@@ -81,21 +88,32 @@ margin-top: 20px;
 
   .card {
     display: inline-block;
-    background-color: #FEE0C0;
+    background-color: #8200009a;
     width: 230px;
-    height: 110px;
+    height: 90px;
     border-radius: 10px;
   }
 
   .supercomment{
-    color: black;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: lighter;
-    text-align: justify;
-    margin-left: 60px;
-    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
     }
+
+  .commenticon{
+    color: #ff7c7cb5;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px auto;
+    display: inline-block;
+  }
+
+  .supericon{
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 .scrolling-wrapper {
   -webkit-overflow-scrolling: touch;
@@ -109,8 +127,8 @@ margin-top: 20px;
 
 .btn{
   background-color: #FF7C7C;
-  margin: 0 auto;
-  border-radius: 15px;
+  margin: 8px auto;
+  border-radius: 13px;
 }
 .mapshowdog{
   width: 100px;
@@ -132,4 +150,23 @@ margin-top: 20px;
   border-radius: 25px;
  }
 
+<<<<<<< HEAD
+ .superbttn{
+  border-radius: 200px;
+ }
+
+
+ .supericon{
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+ }
+
+ .particulardescri{
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+ }
+=======
  
+>>>>>>> abafa524595af5e9b76f2fb1346be415bf482c9d

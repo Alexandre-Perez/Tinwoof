@@ -1,33 +1,65 @@
-<div class="photocontainer">
-<% if @dog.photos.length != 0 %>
-  <%= cl_image_tag @dog.photos.first.key, :class => "photoprofile", crop: :fill %>
+<style>
+body{
+  background-color: #FFF5E4;
+}
+</style>
 
-  <% else %>
-          <p>no picture available for now ...</p>
-  <% end %>
-  <%= link_to chatroom_path, class: "messagelink" do %>
-        <% end %>
-   <p class="supertitle"><%= @dog.name %>, <%= @dog.age %> yo</p>
+<%# PHOTO CHIEN %>
 
-  <p class="details1">
-    <% if @dog.gender == "female" %>
-      <i class="fa-solid fa-venus"></i>
-    <% else %>
-      <i class="fa-solid fa-mars"></i>
-    <% end %>
-    | <%= @dog.race %>
-    | <%= @dog.height %></p>
+<% if @dog.photos.first.nil?  %>
+  <div class="photocontainer photo-default">
+    <div class="elementscontain">
+    <div class="supertitle">
+        <%= @dog.name %>, <%= @dog.age %> yo
+      </div>
+    <p class="particulardescri"><%= @dog.race %> <%= @dog.height %></p>
+<p>
+<% if @dog.gender == "female" %>
+        <i class="fa-solid fa-venus supericon"></i>
+      <% else %>
+        <i class="fa-solid fa-mars supericon"></i>
+      <% end %>
+      </p>
+      <p><%= link_to "Chat with #{@dog.name}", chatroom_path(@users.id), :class => "bouton-message" %></p>
+    </div>
+  </div>
 
-  <%= link_to "Chat with #{@dog.name}", chatroom_path(@users.id), :class => "bouton-message" %>
+<% else %>
+
+  <div class="photocontainer" style="background-image: url('<%= cl_image_path @dog.photos.first.key %>') ">
+    <div class="elementscontain">
+    <div class="supertitle">
+        <%= @dog.name %>, <%= @dog.age %> yo
+      </div>
+    <p class="particulardescri"><%= @dog.race %> <%= @dog.height %></p>
+
+<p>
+<% if @dog.gender == "female" %>
+        <i class="fa-solid fa-venus supericon"></i>
+      <% else %>
+        <i class="fa-solid fa-mars supericon"></i>
+      <% end %>
+      </p>
+      <p><%= link_to "Chat with #{@dog.name}", chatroom_path(@users.id), :class => "bouton-message" %></p>
+    </div>
+  </div>
+<% end %>
+
+
+<%# --------------- %>
+
+
+
+
+<%# DESCRIPTION %>
+<div class="dogdescription d-flex justify-content-center my-5">
+<p class="findugame"><%= @dog.description %></p>
 </div>
 
+<%# ------------------ %>
 
 
-
-<div class="containerd d-flex justify-content-center my-4">
-<p class="dogdescription "><%= @dog.description %></p>
-</div>
-
+<%# PARAMETRES %>
 <div class="d-flex justify-content-around superp">
 <span class="details2">
     <% if @dog.gender == "female" %>
@@ -38,9 +70,11 @@
   </span>
 
   <span class="addressdog">
-  <i class="fa-solid fa-location-dot"></i>  <%= @dog.address %>
+  <i class="fa-solid fa-location-dot"></i>  <%= @dog.address.split.last %>
   </span>
   </div>
+  <%# ------------------------ %>
+
 <br>
 <br>
 
@@ -48,19 +82,16 @@
 <div class="scrolling-wrapper">
 <% @comments.each do |comment| %>
 <% if @dog.id == comment.dog_id %>
-<div class="card"><p class="supercomment">"<%= comment.content %>"</p></div>
+<div class="card">
+<p class="supercomment">"<%= comment.content %>"</p>
+<p class="supericon"><i class="fa-regular fa-comment commenticon"></i></p>
+</div>
 <% end %>
 <% end %>
 </div>
 </div>
-
-
-
-
 <br>
 <h3 class="d-flex justify-content-center my-3">Leave a review to  <em>  <%= @dog.name %> </em> </h3>
-
-
 
 <%= simple_form_for([@dog, @comment]) do |f| %>
   <div class="form-inputs">
@@ -73,7 +104,7 @@
 <br>
 
 
-<div style="width: 100%; height: 300px; margin-bottom: 80px;"
+<div style="width: 100%; height: 300px; margin-bottom: 85px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
