@@ -91,14 +91,36 @@ body{
 </div>
 </div>
 <br>
-<h3 class="d-flex justify-content-center my-3">Leave a review to  <em>  <%= @dog.name %> </em> </h3>
+<h3 class="d-flex justify-content-center my-3">Want to leave a Review ?</h3>
 
-<%= simple_form_for([@dog, @comment]) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :content, label: false, placeholder: "Say something to #{@dog.name} ...", class: "textzone" %>
-    <%= f.button :submit, class: "btn w-80 d-flex justify-content-center" %>
+<div class="d-flex justify-content-center my-4">
+<button type="button" class="finalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="fa-regular fa-comments commentsfonthihi"></i>
+</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">A Review For <%= @dog.name %> ? 🐶</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for([@dog, @comment]) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :content, label: false, placeholder: "Say something to #{@dog.name} ...", class: "textzone" %>
+            <%= f.submit "Send",  class: "btn w-80 d-flex justify-content-center", placeholder:"Send" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
 
 <br>
 <br>
