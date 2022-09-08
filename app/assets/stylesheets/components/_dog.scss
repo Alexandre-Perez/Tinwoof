@@ -3,6 +3,8 @@
 
 .card-group{
    margin: 30px auto;
+   height: 450px;
+   width: 200px;
 }
 
 .link-dog {
@@ -20,11 +22,9 @@
 
 // elements a l'intérieur de la carte
 
-// .card > img {
-//   height: 150px;
-//   width: 100%;
-//   object-fit: cover;
-// }
+.card > img {
+  object-fit: cover;
+}
 
 .card h2 {
   font-size: 18px;
