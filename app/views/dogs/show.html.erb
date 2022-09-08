@@ -49,17 +49,6 @@ body{
 <%# --------------- %>
 
 
-
-
-<%# DESCRIPTION %>
-<div class="dogdescription d-flex justify-content-center my-5">
-<p class="findugame"><%= @dog.description %></p>
-</div>
-
-<%# ------------------ %>
-
-
-<%# PARAMETRES %>
 <div class="d-flex justify-content-around superp">
 <span class="details2">
     <% if @dog.gender == "female" %>
@@ -73,10 +62,18 @@ body{
   <i class="fa-solid fa-location-dot"></i>  <%= @dog.address.split.last %>
   </span>
   </div>
-  <%# ------------------------ %>
 
-<br>
-<br>
+<%# DESCRIPTION %>
+<div class="dogdescription d-flex justify-content-center my-5">
+<p class="findugame"><%= @dog.description %></p>
+</div>
+
+<%# ------------------ %>
+
+
+<%# PARAMETRES %>
+
+  <%# ------------------------ %>
 
 <div class="wrapperp d-flex justify-content-center">
 <div class="scrolling-wrapper">

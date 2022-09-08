@@ -1,9 +1,12 @@
+<style>
+body{
+  background-color: #FFF5E4;
+}
+</style>
 
 <div class="d-flex justify-content-center">
 <h1 class="titlemain">Hello <%= @user.first_name %>, and Welcome !</h1>
 </div>
-
-
 <div class="d-flex justify-content-center">
 <% if @user.photo.attached? %>
   <%= cl_image_tag @user.photo.key, crop: :fill, :class => "img_preview" %>
@@ -21,13 +24,8 @@
 <div class="d-flex justify-content-center my-3">
 <i class="fa-regular fa-comment-dots supercommenticon"></i>
 </div>
+<hr>
 <br>
-
-
-
-
-
-
 <div class="d-flex justify-content-center">
 <div class="scrolling-wrapperre">
 
@@ -46,6 +44,7 @@
 <div class="d-flex justify-content-center my-3">
 <i class="fa-solid fa-dog supercommenticon"></i>
 </div>
+<hr>
 <div class="divphotos d-flex justify-content-center">
 <% @dogs.each do |dog| %>
  <%= link_to edit_dog_path(dog), class: "superlink" do%>
@@ -58,7 +57,5 @@
     <i class="fa-solid fa-right-from-bracket"></i>
   <% end %>
 
-<h1>coucou</h1>
-
-<div class="piege">
+<div class="pieger">
 </div>

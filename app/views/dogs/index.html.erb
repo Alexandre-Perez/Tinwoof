@@ -2,22 +2,21 @@
 body{
 }
 .wrapper {
-  width: 85%;
+  width: 93%;
   margin: 0 auto;
  }
 </style>
 
 
 <div class="backgroundpicture">
-<div class="mx-3">
 <div class="d-flex justify-content-center">
 <%= form_with url: dogs_path, method: :get, class: "d-flex justify-content-between" do %>
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"]), class:"superbttn"  %>
     <%= submit_tag "Search", class: "btn btn-dark btn-outline-white" %>
   <% end %>
   </div>
-
-  <div class="scroll-container">
+<div class="wrapper">
+  <div class="scroll-container" style="">
     <% @dogs.each do |dog| %>
       <%= link_to dog_path(dog), class: "link-dog" do %>
       <div class="card-group">

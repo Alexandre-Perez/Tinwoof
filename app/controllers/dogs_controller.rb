@@ -74,7 +74,7 @@ class DogsController < ApplicationController
 
   def update
     if @dog.update(dog_params)
-      redirect_to new_dog_path
+      redirect_to dogs_path
     else
       render :edit
     end
