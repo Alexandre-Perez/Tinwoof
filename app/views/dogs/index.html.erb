@@ -12,7 +12,7 @@ body{
 <div class="d-flex justify-content-center">
 <%= form_with url: dogs_path, method: :get, class: "d-flex justify-content-between" do %>
   <%= select_tag :query, options_for_select(["Select gender", "Male", "Female"]), class:"superbttn"  %>
-    <%= submit_tag "Search", class: "btn btn-dark btn-outline-white" %>
+    <%= submit_tag "Search", class: "dernierbouton" %>
   <% end %>
   </div>
 <div class="wrapper">
