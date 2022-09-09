@@ -21,120 +21,105 @@ users = User.create!([
     email: "karim@gmail.com",
     password: "karimdu7518",
     first_name: "Karim",
-    last_name: "Meghraoui",
-    location: "Paris 18"
+    last_name: "Meghraoui"
   },
 
   {
     email: "olympia@gmail.com",
     password: "yassindu91",
     first_name: "Olympia",
-    last_name: "Beaulac",
-    location: "Evry"
+    last_name: "Beaulac"
   },
 
   {
     email: "merouane@gmail.com",
     password: "123456",
     first_name: "Merouane",
-    last_name: "Masaoudi",
-    location: "Marseille"
+    last_name: "Masaoudi"
   },
 
   {
     email: "ueno@gmail.com",
     password: "123456",
     first_name: "Hidesaburō",
-    last_name: "Ueno",
-    location: "Tokyo"
+    last_name: "Ueno"
   },
 
   {
     email: "alexandre@gmail.com",
     password: "123456",
     first_name: "Alexandre",
-    last_name: "Pépé",
-    location: "Paris"
+    last_name: "Pépé"
   },
 
   {
     email: "edouard@gmail.com",
     password: "123456",
     first_name: "Édouard ",
-    last_name: "Moreau",
-    location: "Saint-Martin"
+    last_name: "Moreau"
   },
 
   {
     email: "finine@gmail.com",
     password: "123456",
     first_name: "Fifine",
-    last_name: "Thériault",
-    location: "Créteil"
+    last_name: "Thériault"
   },
 
   {
     email: "saindon@gmail.com",
     password: "123456",
     first_name: "Joséphine",
-    last_name: "Saindon",
-    location: "Nanterre"
+    last_name: "Saindon"
   },
 
   {
     email: "guillaume@gmail.com",
     password: "123456",
     first_name: "Guillaume",
-    last_name: "D'Aoust",
-    location: "Paris"
+    last_name: "D'Aoust"
   },
 
   {
     email: "catherine@gmail.com",
     password: "123456",
     first_name: "Catherine",
-    last_name: "Blais",
-    location: "Paris"
+    last_name: "Blais"
   },
 
   {
     email: "julie@gmail.com",
     password: "123456",
     first_name: "Julie",
-    last_name: "Desnoyers",
-    location: "Paris"
+    last_name: "Desnoyers"
   },
 
   {
     email: "sennet@gmail.com",
     password: "123456",
     first_name: "Sennet",
-    last_name: "Marleau",
-    location: "Paris"
+    last_name: "Marleau"
   },
 
   {
     email: "somerville@gmail.com",
     password: "123456",
     first_name: "Somerville",
-    last_name: "Gousse",
-    location: "Paris"
+    last_name: "Gousse"
   },
 
   {
     email: "eloise@gmail.com",
     password: "123456",
     first_name: "Eloise ",
-    last_name: "Martel",
-    location: "Paris"
+    last_name: "Martel"
   },
 
   {
     email: "dexter@gmail.com",
     password: "123456",
     first_name: "Dexter",
-    last_name: "Mailly",
-    location: "Paris"
+    last_name: "Mailly"
   },
 ])
 
